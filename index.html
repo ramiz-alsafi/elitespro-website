@@ -3,86 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ElitesPro - Professional Customer Support Outsourcing</title>
+  <title>ElitesPro | Customer Support Outsourcing</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/scripts.js" defer></script>
 </head>
 <body>
-  <!-- Header with navigation -->
   <header>
-    <h1><a href="index.html" style="color: white; text-decoration:none;">ElitesPro</a></h1>
+    <h1><a href="index.html">ElitesPro</a></h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">Services ▼</a>
+
+        <!-- Services dropdown -->
+        <li tabindex="0">
+          <a href="#">Services &#x25BC;</a>
           <ul class="dropdown" aria-label="Services submenu">
-            <li><a href="services/inbound.html">Inbound Support Agents</a></li>
-            <li><a href="services/chat.html">Live Chat Agents</a></li>
-            <li><a href="services/crm.html">CRM Setup & Integration</a></li>
-            <li><a href="services/tech.html">Tech Support</a></li>
-            <li><a href="services/multilingual.html">Multilingual Agents</a></li>
+            <li><a href="services/inbound.html">Inbound Support</a></li>
+            <li><a href="services/chat.html">Live Chat Support</a></li>
+            <li><a href="services/crm.html">CRM Integration</a></li>
+            <li><a href="services/tech.html">Tech Setup</a></li>
+            <li><a href="services/multilingual.html">Multilingual Support</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">Contact ▼</a>
-          <ul class="dropdown" aria-label="Contact submenu">
-            <li><a href="contact-email.html">Email Us</a></li>
-            <li><a href="contact.html#callus">Call Us</a></li>
-            <li><a href="contact.html#livechat">Start Live Chat</a></li>
-          </ul>
-        </li>
+
         <li><a href="about.html">About</a></li>
         <li><a href="blog.html">Blog</a></li>
+
+        <!-- Contact dropdown -->
+        <li tabindex="0">
+          <a href="#">Contact &#x25BC;</a>
+          <ul class="dropdown" aria-label="Contact submenu">
+            <li><a href="contact.html">Email Us</a></li>
+            <li>
+              <a href="tel:+19313408943"
+                >Call Us: +1 (931) 340-8943</a
+              >
+            </li>
+            <li>
+              <a href="https://1309.3cx.cloud/elitepro" target="_blank"
+                >Start Live Chat</a
+              >
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main content -->
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <h2>Your Trusted Partner in Customer Support Outsourcing</h2>
+      <h2>Next-Level Customer Support</h2>
       <p>
-        ElitesPro offers professional, reliable, and cost-effective remote customer support solutions tailored to your business needs.
+        We help businesses shine with creative, unified, and
+        integrity-driven customer care experiences — powered by people who care.
       </p>
       <a href="services/inbound.html" class="btn-primary">Explore Our Services</a>
     </section>
 
-    <!-- What's New block -->
-    <section class="whats-new" aria-label="What's New">
-      <h3>What's New at ElitesPro</h3>
+    <!-- What’s New Block -->
+    <section class="whats-new" aria-label="Latest Updates">
+      <h3>What’s New at ElitesPro</h3>
       <ul>
-        <li><strong>June 2025:</strong> Launched our multilingual support services — now you can provide customer care in 5+ languages!</li>
-        <li><strong>May 2025:</strong> Integrated 3CX live chat and VoIP calling for seamless customer communication.</li>
-        <li><strong>April 2025:</strong> Added CRM setup & integration services to help you streamline your customer data and workflows.</li>
+        <li>Launched our new <strong>Live Chat Support Service</strong> for 24/7 customer engagement.</li>
+        <li>Integrated cutting-edge <strong>CRM automation</strong> to streamline client workflows.</li>
+        <li>Expanded our multilingual support team to cover <strong>8 major languages.</strong></li>
+        <li>Released new detailed service pages to help you learn more about what we offer.</li>
       </ul>
     </section>
 
-    <section class="features">
+    <!-- Features Section -->
+    <section class="features" aria-label="Our Key Services">
       <article>
-        <h3>Inbound Support Agents</h3>
-        <p>Highly trained professionals available 24/7 to handle your customer calls with expertise and care.</p>
+        <h3>Inbound Support</h3>
+        <p>Our trained agents provide professional phone and email support tailored to your brand.</p>
         <a href="services/inbound.html">Learn More →</a>
       </article>
       <article>
-        <h3>Live Chat Agents</h3>
-        <p>Real-time chat support to engage your customers instantly on your website or social media channels.</p>
+        <h3>Live Chat Support</h3>
+        <p>Boost customer satisfaction with real-time chat agents available 24/7 across platforms.</p>
         <a href="services/chat.html">Learn More →</a>
       </article>
       <article>
-        <h3>CRM Setup & Integration</h3>
-        <p>Optimize your sales and support workflows with our customized CRM solutions and integration expertise.</p>
+        <h3>CRM Integration</h3>
+        <p>We integrate and customize CRM systems like Zoho, Salesforce, and more for seamless workflows.</p>
         <a href="services/crm.html">Learn More →</a>
+      </article>
+      <article>
+        <h3>Tech Setup & Automation</h3>
+        <p>Complete VoIP, hardware, and software setup with automation to optimize your call center operations.</p>
+        <a href="services/tech.html">Learn More →</a>
+      </article>
+      <article>
+        <h3>Multilingual Support</h3>
+        <p>Reach global audiences with fluent support in English, Spanish, French, Arabic, and more.</p>
+        <a href="services/multilingual.html">Learn More →</a>
       </article>
     </section>
   </main>
 
-  <!-- Footer with contact info -->
   <footer>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
     <div class="footer-contact">
-      <a href="tel:+19313408943" aria-label="Call us at +1 931 340 8943">📞 +1 (931) 340-8943</a>
-      <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener" aria-label="Start live chat">💬 Start Live Chat</a>
+      <a href="mailto:ramizalsafi@www.elitespro.online">Email Us</a>
+      <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
+      <a href="https://1309.3cx.cloud/elitepro" target="_blank">Start Live Chat</a>
     </div>
   </footer>
 </body>
