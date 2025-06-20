@@ -1,76 +1,384 @@
-/* Hide main nav on small screens */
-#main-nav {
-  display: flex;
-  gap: 1.5rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElitesPro | Customer Support Outsourcing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    /* --- Base styles (unchanged) --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f7f9fb;
+      color: #222;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideIn 1s ease forwards;
+      position: relative;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav button.dropdown-toggle:hover {
+      color: #38bdf8;
+      cursor: pointer;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0f172a;
+      animation: fadeIn 2s ease;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+      color: #475569;
+    }
+    .hero img {
+      margin-top: 40px;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .value {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #38bdf8;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+    }
+    .value h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .value p {
+      color: #475569;
+      line-height: 1.6;
+    }
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      position: relative;
+    }
+    .chat-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .chat-button:hover {
+      background-color: #0ea5e9;
+      transform: translateY(-2px);
+    }
 
-#mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
+    /* --- New Navigation Styles & Responsive Menu --- */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+    }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  #main-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    position: fixed;
-    top: 60px; /* adjust based on header height */
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-    border-radius: 0 0 0 10px;
-    z-index: 10000;
-  }
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-  #main-nav.show {
-    display: flex;
-  }
+    /* Dropdown toggle button */
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0;
+    }
 
-  #main-nav ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
+    /* Dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #0f172a;
+      min-width: 180px;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
+    }
+    .dropdown-menu a {
+      color: #e2e8f0;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-menu a:hover {
+      background-color: #1e293b;
+      color: #38bdf8;
+    }
 
-  #main-nav ul li {
-    margin-bottom: 1rem;
-  }
+    /* Show dropdown on hover for desktop */
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: flex;
+    }
 
-  #main-nav ul li a,
-  #main-nav ul li button.dropdown-toggle {
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
+    /* Mobile Menu Toggle Button */
+    #mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #38bdf8;
+      cursor: pointer;
+      user-select: none;
+      position: absolute;
+      top: 18px;
+      right: 40px;
+    }
 
-  #mobile-menu-toggle {
-    display: block;
-    color: #0070f3;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #0f172a;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        padding: 1rem 0;
+        border-radius: 0 0 0 12px;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+        z-index: 2000;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+      nav ul li a,
+      nav ul li button.dropdown-toggle {
+        color: #e2e8f0;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 100%;
+        text-align: left;
+      }
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        padding-left: 1rem;
+        display: none !important; /* hide by default on mobile */
+      }
+      /* Show dropdown content when dropdown toggle is clicked on mobile */
+      .dropdown.open > .dropdown-menu {
+        display: flex !important;
+        flex-direction: column;
+      }
+      #mobile-menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" style="color: white; text-decoration: none;">ElitesPro</a></h1>
 
-  /* Dropdown menus in mobile nav */
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    background: #333;
-    border-radius: 0;
-    margin-top: 0.3rem;
-  }
+    <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
 
-  .dropdown-menu a {
-    color: #ddd;
-  }
-}
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown" id="services-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services ▼</button>
+          <div class="dropdown-menu" aria-label="Services submenu">
+            <a href="services/inbound.html">Inbound Support</a>
+            <a href="services/chat.html">Live Chat Support</a>
+            <a href="services/crm.html">CRM Integration</a>
+            <a href="services/tech.html">Tech Setup & Automation</a>
+            <a href="services/multilingual.html">Multilingual Support</a>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown" id="contact-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact ▼</button>
+          <div class="dropdown-menu" aria-label="Contact submenu">
+            <a href="contact.html#email-form-section">Email Us</a>
+            <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
+            <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Next-Level Customer Support</h1>
+    <p>We help businesses shine with creative, unified, and integrity-driven customer care experiences — powered by people who care.</p>
+    <img src="callcenter.jpg" alt="Call center team working professionally" />
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="values">
+      <div class="value">
+        <h3>Outsourced Support Agents</h3>
+        <p>Hire professionally trained customer support agents ready to represent your brand with care, clarity, and professionalism — available for live chat, phone, email, or social media.</p>
+      </div>
+      <div class="value">
+        <h3>Launch Your Own Call Center</h3>
+        <p>Start your own in-house or remote call center agency — we help you build it from the ground up. From team sourcing and training to system setup and workflow automation, we’ve got you covered.</p>
+      </div>
+      <div class="value">
+        <h3>End-to-End Setup (Virtual or Physical)</h3>
+        <p>Whether you want a fully virtual call center or a physical office setup, we provide everything: VoIP systems, CRMs, integrations, hardware guidance, and full technical support — tailored to your business model.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="values">
+    <h2>Our Core Values</h2>
+    <div class="values">
+      <div class="value">
+        <h3>Creative Precision</h3>
+        <p>We think outside the box with innovative customer service approaches, balancing creativity with operational precision.</p>
+      </div>
+      <div class="value">
+        <h3>Tech Savvy</h3>
+        <p>We use the best modern tools to streamline and automate workflows, empowering agents and maximizing client satisfaction.</p>
+      </div>
+      <div class="value">
+        <h3>Integrity & Honesty</h3>
+        <p>We believe in transparent communication, ethical business, and delivering on our promises — always.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ElitesPro. All rights reserved.
+    <br />
+    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    mobileMenuToggle.addEventListener('click', () => {
+      const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+      mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('show');
+    });
+
+    // Dropdown toggle for mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = toggle.parentElement;
+          const isOpen = parent.classList.contains('open');
+          if (isOpen) {
+            parent.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+          } else {
+            // Close other open dropdowns
+            document.querySelectorAll('.dropdown.open').forEach(d => {
+              d.classList.remove('open');
+              d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+            });
+            parent.classList.add('open');
+            toggle.setAttribute('aria-expanded', true);
+          }
+        }
+      });
+    });
+
+    // Close mobile menu and dropdowns when resizing window larger than mobile breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        mainNav.classList.remove('show');
+        mobileMenuToggle.setAttribute('aria-expanded', false);
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
