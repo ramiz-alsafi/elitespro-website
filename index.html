@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ElitesPro | Customer Support Outsourcing</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    /* [UNCHANGED STYLES ABOVE] */
     * {
       margin: 0;
       padding: 0;
@@ -25,74 +24,213 @@
       justify-content: space-between;
       align-items: center;
       animation: slideIn 1s ease forwards;
-      position: relative;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     nav {
       position: relative;
     }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav li {
+      position: relative;
+    }
     nav a {
-      margin-left: 20px;
       color: #e2e8f0;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
+      cursor: pointer;
     }
     nav a:hover {
       color: #38bdf8;
-    }
-
-    /* 🔽 Dropdown Styles */
-    .dropdown {
-      position: relative;
-      display: inline-block;
     }
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #1e293b;
-      min-width: 220px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 1;
-      border-radius: 6px;
+      padding: 10px;
+      border-radius: 8px;
+      top: 35px;
+      left: 0;
+      z-index: 10;
+      min-width: 180px;
     }
     .dropdown-content a {
-      color: #e2e8f0;
-      padding: 12px 16px;
       display: block;
+      padding: 10px;
+      color: #e2e8f0;
       text-decoration: none;
     }
     .dropdown-content a:hover {
       background-color: #334155;
     }
-    .dropdown:hover .dropdown-content {
+    nav li:hover .dropdown-content {
       display: block;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0f172a;
+      animation: fadeIn 2s ease;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+      color: #475569;
+    }
+    .hero img {
+      margin-top: 40px;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .value {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #38bdf8;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+    }
+    .value h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .value p {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .chat-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .chat-button:hover {
+      background-color: #0ea5e9;
+      transform: translateY(-2px);
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>ElitesPro</h1>
     <nav>
-      <a href="#">Home</a>
+      <ul>
+        <li><a href="#">Home</a></li>
 
-      <div class="dropdown">
-        <a href="#services">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="services/inbound.html">Inbound & Outbound Support</a>
-          <a href="services/chat.html">Live Chat & Messaging</a>
-          <a href="services/crm.html">CRM Integration</a>
-          <a href="services/tech.html">Technical Support</a>
-          <a href="services/multilingual.html">Multilingual Support</a>
-        </div>
-      </div>
+        <li>
+          <a>Services ▾</a>
+          <div class="dropdown-content">
+            <a href="outsourced-support.html">Outsourced Support Agents</a>
+            <a href="launch-callcenter.html">Launch Your Own Call Center</a>
+            <a href="end-to-end-setup.html">End-to-End Call Center Setup</a>
+          </div>
+        </li>
 
-      <a href="#values">Our Values</a>
-      <a href="#contact">Contact</a>
+        <li><a href="#values">Our Values</a></li>
+
+        <li>
+          <a>Contact ▾</a>
+          <div class="dropdown-content">
+            <a href="contact-email.html">Email Us</a>
+            <a href="tel:+19313408943">Call Us</a>
+            <a href="https://1309.3cx.cloud/elitepro" target="_blank">Start Live Chat</a>
+          </div>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Everything else in your page stays exactly the same -->
+  <section class="hero">
+    <h1>Next-Level Customer Support</h1>
+    <p>We help businesses shine with creative, unified, and integrity-driven customer care experiences — powered by people who care.</p>
+    <img src="callcenter.jpg" alt="Call center team working professionally" />
+  </section>
+
+  <section id="values">
+    <h2>Our Core Values</h2>
+    <div class="values">
+      <div class="value">
+        <h3>Creative Precision</h3>
+        <p>We think outside the box — but we master what’s inside it first. Our agents are not just voices — they’re solvers, thinkers, and creators.</p>
+      </div>
+      <div class="value">
+        <h3>Unified Excellence</h3>
+        <p>We act as one team, win as one team. Everyone contributes their best — skill, effort, or insight — and individual success builds our collective power.</p>
+      </div>
+      <div class="value">
+        <h3>Bold Integrity</h3>
+        <p>We speak up, show up, and follow through. We’re transparent, trustworthy, and ethical — with clients and with each other.</p>
+      </div>
+      <div class="value">
+        <h3>Customer Obsession</h3>
+        <p>We don’t just support customers — we care for them. Every call, every ticket, every moment counts toward world-class satisfaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 ElitesPro. All rights reserved. | Contact: <a href="tel:+19313408943" style="color: #38bdf8;">+1 (931) 340-8943</a></p>
+    <a href="https://1309.3cx.cloud/elitepro" target="_blank" class="chat-button">
+      Start Live Chat
+    </a>
+  </footer>
+
+</body>
+</html>
