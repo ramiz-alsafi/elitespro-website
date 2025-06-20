@@ -2,235 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ElitesPro | Customer Support Outsourcing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background: #f7f9fb;
-      color: #222;
-    }
-    header {
-      background-color: #0f172a;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      animation: slideIn 1s ease forwards;
-    }
-    nav {
-      position: relative;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav li {
-      position: relative;
-    }
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      cursor: pointer;
-    }
-    nav a:hover {
-      color: #38bdf8;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1e293b;
-      padding: 10px;
-      border-radius: 8px;
-      top: 35px;
-      left: 0;
-      z-index: 10;
-      min-width: 180px;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: #e2e8f0;
-      text-decoration: none;
-    }
-    .dropdown-content a:hover {
-      background-color: #334155;
-    }
-    nav li:hover .dropdown-content {
-      display: block;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #0f172a;
-      animation: fadeIn 2s ease;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.2rem;
-      color: #475569;
-    }
-    .hero img {
-      margin-top: 40px;
-      max-width: 400px;
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #0f172a;
-    }
-    .values {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    .value {
-      background: white;
-      padding: 20px;
-      border-left: 5px solid #38bdf8;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      border-radius: 12px;
-    }
-    .value h3 {
-      margin-bottom: 10px;
-      color: #0f172a;
-    }
-    .value p {
-      color: #475569;
-      line-height: 1.6;
-    }
-
-    footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 30px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    .chat-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background-color: #38bdf8;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .chat-button:hover {
-      background-color: #0ea5e9;
-      transform: translateY(-2px);
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElitesPro - Professional Customer Support Outsourcing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/scripts.js" defer></script>
 </head>
 <body>
-
+  <!-- Header with navigation -->
   <header>
-    <h1>ElitesPro</h1>
+    <h1><a href="index.html" style="color: white; text-decoration:none;">ElitesPro</a></h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-
+        <li><a href="index.html">Home</a></li>
         <li>
-          <a>Services ▾</a>
-          <div class="dropdown-content">
-            <a href="outsourced-support.html">Outsourced Support Agents</a>
-            <a href="launch-callcenter.html">Launch Your Own Call Center</a>
-            <a href="end-to-end-setup.html">End-to-End Call Center Setup</a>
-          </div>
+          <a href="#" aria-haspopup="true" aria-expanded="false">Services ▼</a>
+          <ul class="dropdown" aria-label="Services submenu">
+            <li><a href="services/inbound.html">Inbound Support Agents</a></li>
+            <li><a href="services/chat.html">Live Chat Agents</a></li>
+            <li><a href="services/crm.html">CRM Setup & Integration</a></li>
+            <li><a href="services/tech.html">Tech Support</a></li>
+            <li><a href="services/multilingual.html">Multilingual Agents</a></li>
+          </ul>
         </li>
-
-        <li><a href="#values">Our Values</a></li>
-
         <li>
-          <a>Contact ▾</a>
-          <div class="dropdown-content">
-            <a href="contact-email.html">Email Us</a>
-            <a href="tel:+19313408943">Call Us</a>
-            <a href="https://1309.3cx.cloud/elitepro" target="_blank">Start Live Chat</a>
-          </div>
+          <a href="#" aria-haspopup="true" aria-expanded="false">Contact ▼</a>
+          <ul class="dropdown" aria-label="Contact submenu">
+            <li><a href="contact-email.html">Email Us</a></li>
+            <li><a href="contact.html#callus">Call Us</a></li>
+            <li><a href="contact.html#livechat">Start Live Chat</a></li>
+          </ul>
         </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Next-Level Customer Support</h1>
-    <p>We help businesses shine with creative, unified, and integrity-driven customer care experiences — powered by people who care.</p>
-    <img src="callcenter.jpg" alt="Call center team working professionally" />
-  </section>
+  <!-- Main content -->
+  <main>
+    <section class="hero">
+      <h2>Your Trusted Partner in Customer Support Outsourcing</h2>
+      <p>
+        ElitesPro offers professional, reliable, and cost-effective remote customer support solutions tailored to your business needs.
+      </p>
+      <a href="services/inbound.html" class="btn-primary">Explore Our Services</a>
+    </section>
 
-  <section id="values">
-    <h2>Our Core Values</h2>
-    <div class="values">
-      <div class="value">
-        <h3>Creative Precision</h3>
-        <p>We think outside the box — but we master what’s inside it first. Our agents are not just voices — they’re solvers, thinkers, and creators.</p>
-      </div>
-      <div class="value">
-        <h3>Unified Excellence</h3>
-        <p>We act as one team, win as one team. Everyone contributes their best — skill, effort, or insight — and individual success builds our collective power.</p>
-      </div>
-      <div class="value">
-        <h3>Bold Integrity</h3>
-        <p>We speak up, show up, and follow through. We’re transparent, trustworthy, and ethical — with clients and with each other.</p>
-      </div>
-      <div class="value">
-        <h3>Customer Obsession</h3>
-        <p>We don’t just support customers — we care for them. Every call, every ticket, every moment counts toward world-class satisfaction.</p>
-      </div>
+    <!-- What's New block -->
+    <section class="whats-new" aria-label="What's New">
+      <h3>What's New at ElitesPro</h3>
+      <ul>
+        <li><strong>June 2025:</strong> Launched our multilingual support services — now you can provide customer care in 5+ languages!</li>
+        <li><strong>May 2025:</strong> Integrated 3CX live chat and VoIP calling for seamless customer communication.</li>
+        <li><strong>April 2025:</strong> Added CRM setup & integration services to help you streamline your customer data and workflows.</li>
+      </ul>
+    </section>
+
+    <section class="features">
+      <article>
+        <h3>Inbound Support Agents</h3>
+        <p>Highly trained professionals available 24/7 to handle your customer calls with expertise and care.</p>
+        <a href="services/inbound.html">Learn More →</a>
+      </article>
+      <article>
+        <h3>Live Chat Agents</h3>
+        <p>Real-time chat support to engage your customers instantly on your website or social media channels.</p>
+        <a href="services/chat.html">Learn More →</a>
+      </article>
+      <article>
+        <h3>CRM Setup & Integration</h3>
+        <p>Optimize your sales and support workflows with our customized CRM solutions and integration expertise.</p>
+        <a href="services/crm.html">Learn More →</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer with contact info -->
+  <footer>
+    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
+    <div class="footer-contact">
+      <a href="tel:+19313408943" aria-label="Call us at +1 931 340 8943">📞 +1 (931) 340-8943</a>
+      <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener" aria-label="Start live chat">💬 Start Live Chat</a>
     </div>
-  </section>
-
-  <footer id="contact">
-    <p>&copy; 2025 ElitesPro. All rights reserved. | Contact: <a href="tel:+19313408943" style="color: #38bdf8;">+1 (931) 340-8943</a></p>
-    <a href="https://1309.3cx.cloud/elitepro" target="_blank" class="chat-button">
-      Start Live Chat
-    </a>
   </footer>
-
 </body>
 </html>
