@@ -1,49 +1,62 @@
+<!-- Same structure as above, just change title and content -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CRM Integration | ElitesPro</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Same styles as inbound.html */
+  </style>
 </head>
 <body>
   <header>
-    <h1><a href="../index.html">ElitesPro</a></h1>
+    <h1><a href="../index.html" style="color: white; text-decoration: none;">ElitesPro</a></h1>
+    <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     <nav>
-      <ul>
+      <ul id="main-nav">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="inbound.html">Inbound Support</a></li>
-        <li><a href="chat.html">Live Chat Support</a></li>
-        <li><a href="crm.html" aria-current="page">CRM Integration</a></li>
-        <li><a href="tech.html">Tech Setup</a></li>
-        <li><a href="multilingual.html">Multilingual Support</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li class="dropdown" id="services-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services ▼</button>
+          <div class="dropdown-menu" aria-label="Services submenu">
+            <a href="inbound.html">Inbound Support</a>
+            <a href="chat.html">Live Chat Support</a>
+            <a href="crm.html">CRM Integration</a>
+            <a href="tech.html">Tech Setup & Automation</a>
+            <a href="multilingual.html">Multilingual Support</a>
+          </div>
+        </li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li class="dropdown" id="contact-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact ▼</button>
+          <div class="dropdown-menu" aria-label="Contact submenu">
+            <a href="../contact.html#email-form-section">Email Us</a>
+            <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
+            <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="service-detail">
-      <h2>CRM Integration</h2>
-      <p>
-        We integrate leading CRM platforms like Zoho, Salesforce, HubSpot, and more to automate workflows, centralize customer data, and empower your support team with actionable insights.
-      </p>
-      <ul>
-        <li>Custom CRM setup and customization</li>
-        <li>Seamless integration with call center software</li>
-        <li>Automated ticketing and follow-ups</li>
-        <li>Training and ongoing support</li>
-      </ul>
-      <a href="../index.html" class="btn-primary">Back to Home</a>
-    </section>
+    <h1>CRM Integration</h1>
+    <p>
+      We seamlessly integrate CRM solutions tailored to your business needs.
+      Optimize your customer relationships, automate workflows, and enhance data-driven decisions with our expert CRM services.
+    </p>
   </main>
 
   <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
+    &copy; 2025 ElitesPro. All rights reserved.
+    <br />
+    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
   </footer>
+
+  <script>
+    /* Same JS for mobile menu and dropdown toggles */
+  </script>
 </body>
 </html>
