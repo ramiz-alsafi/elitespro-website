@@ -4,264 +4,340 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | ElitesPro</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    /* Simple styles for the contact form and dropdown */
-
-    .contact-container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 0 20px;
+    /* Same base styles as index and about */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
-
-    h2 {
-      font-weight: 800;
-      margin-bottom: 1rem;
+    body {
+      background: #f7f9fb;
       color: #222;
     }
-
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideIn 1s ease forwards;
+      position: relative;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav button.dropdown-toggle:hover {
+      color: #38bdf8;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0f172a;
+      margin-bottom: 25px;
+      font-weight: 800;
+      font-size: 2.4rem;
+      text-align: center;
+    }
     form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 18px;
     }
-
     label {
       font-weight: 600;
-    }
-
-    input,
-    textarea {
-      padding: 10px;
+      color: #334155;
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      resize: vertical;
     }
-
-    textarea {
-      min-height: 120px;
-    }
-
-    button[type="submit"] {
-      background-color: #0070f3;
-      color: white;
-      font-weight: 700;
-      padding: 12px;
-      border: none;
+    input, textarea {
+      padding: 10px 15px;
+      border: 2px solid #cbd5e1;
       border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    input:focus, textarea:focus {
+      border-color: #38bdf8;
+      outline: none;
+    }
+    textarea {
+      min-height: 140px;
+    }
+    button.submit-btn {
+      background-color: #38bdf8;
+      color: white;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      width: 150px;
-      align-self: flex-start;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    button.submit-btn:hover {
+      background-color: #0ea5e9;
+    }
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      position: relative;
+      margin-top: 50px;
+    }
+    .chat-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .chat-button:hover {
+      background-color: #0ea5e9;
+      transform: translateY(-2px);
     }
 
-    button[type="submit"]:hover {
-      background-color: #005bb5;
+    /* Navigation styles - same as previous pages */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
     }
-
-    /* Dropdown styles */
+    nav ul li {
+      position: relative;
+    }
     .dropdown {
       position: relative;
       display: inline-block;
-      margin-bottom: 2rem;
     }
-
     .dropdown-toggle {
-      background-color: #0070f3;
-      color: white;
-      padding: 12px 20px;
-      font-weight: 700;
+      background: none;
       border: none;
-      border-radius: 6px;
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      user-select: none;
+      padding: 0;
     }
-
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: 45px;
-      left: 0;
-      background-color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background-color: #0f172a;
+      min-width: 180px;
       border-radius: 6px;
-      min-width: 200px;
-      z-index: 10;
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 12px 16px;
-      color: #0070f3;
-      text-decoration: none;
-      font-weight: 600;
-      border-bottom: 1px solid #eee;
-    }
-
-    .dropdown-menu a:last-child {
-      border-bottom: none;
-    }
-
-    .dropdown-menu a:hover {
-      background-color: #f0f8ff;
-    }
-
-    /* Show dropdown on toggle click */
-    .dropdown.show .dropdown-menu {
-      display: block;
-    }
-
-    /* Fixed footer contact bar */
-    footer.contact-footer {
-      position: fixed;
-      bottom: 0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      top: 100%;
       left: 0;
-      right: 0;
-      background: #222;
-      color: white;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 0;
-      font-family: 'Inter', sans-serif;
       z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
     }
-
-    footer.contact-footer a,
-    footer.contact-footer button {
-      color: #fff;
-      font-weight: 600;
+    .dropdown-menu a {
+      color: #e2e8f0;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-menu a:hover {
+      background-color: #1e293b;
+      color: #38bdf8;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: flex;
+    }
+    #mobile-menu-toggle {
+      display: none;
       background: none;
       border: none;
+      font-size: 2rem;
+      color: #38bdf8;
       cursor: pointer;
-      text-decoration: underline;
-      font-size: 1rem;
-      padding: 0 10px;
+      user-select: none;
+      position: absolute;
+      top: 18px;
+      right: 40px;
     }
-
-    footer.contact-footer a:hover,
-    footer.contact-footer button:hover {
-      color: #0070f3;
-      text-decoration: none;
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #0f172a;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        padding: 1rem 0;
+        border-radius: 0 0 0 12px;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+        z-index: 2000;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+      nav ul li a,
+      nav ul li button.dropdown-toggle {
+        color: #e2e8f0;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 100%;
+        text-align: left;
+      }
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        padding-left: 1rem;
+        display: none !important;
+      }
+      .dropdown.open > .dropdown-menu {
+        display: flex !important;
+        flex-direction: column;
+      }
+      #mobile-menu-toggle {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1><a href="index.html">ElitesPro</a></h1>
+    <h1><a href="index.html" style="color: white; text-decoration: none;">ElitesPro</a></h1>
+
+    <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
     <nav>
-      <ul>
+      <ul id="main-nav">
         <li><a href="index.html">Home</a></li>
-        <li>
-          <div class="dropdown" id="services-dropdown">
-            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-              Services ▼
-            </button>
-            <div class="dropdown-menu" aria-label="Services submenu">
-              <a href="services/inbound.html">Inbound Support</a>
-              <a href="services/chat.html">Live Chat Support</a>
-              <a href="services/crm.html">CRM Integration</a>
-              <a href="services/tech.html">Tech Setup & Automation</a>
-              <a href="services/multilingual.html">Multilingual Support</a>
-            </div>
+        <li class="dropdown" id="services-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services ▼</button>
+          <div class="dropdown-menu" aria-label="Services submenu">
+            <a href="services/inbound.html">Inbound Support</a>
+            <a href="services/chat.html">Live Chat Support</a>
+            <a href="services/crm.html">CRM Integration</a>
+            <a href="services/tech.html">Tech Setup & Automation</a>
+            <a href="services/multilingual.html">Multilingual Support</a>
           </div>
         </li>
-        <li>
-          <div class="dropdown" id="contact-dropdown">
-            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-              Contact ▼
-            </button>
-            <div class="dropdown-menu" aria-label="Contact submenu">
-              <a href="#email-form-section" id="email-us-link">Email Us</a>
-              <a href="tel:+1234567890" id="call-us-link">Call Us: +1 234 567 890</a>
-              <a href="https://your-3cx-web-client-link" id="live-chat-link" target="_blank" rel="noopener noreferrer">
-                Start Live Chat
-              </a>
-            </div>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown" id="contact-dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact ▼</button>
+          <div class="dropdown-menu" aria-label="Contact submenu">
+            <a href="#email-form-section">Email Us</a>
+            <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
+            <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
           </div>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="contact-container">
-    <h2>Contact Us by Email</h2>
-    <form id="contact-form" action="mailto:ramizalsafi@www.elitespro.online" method="POST" enctype="text/plain">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="First Name" required />
-
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="Last Name" required />
-
-      <label for="email-address">Email Address</label>
-      <input type="email" id="email-address" name="Email Address" required />
-
-      <label for="phone-number">Phone Number</label>
-      <input type="tel" id="phone-number" name="Phone Number" required />
-
+  <section id="email-form-section">
+    <h1>Contact Us</h1>
+    <form id="contact-form" action="mailto:ramizalsafi@www.elitespro.online" method="post" enctype="text/plain">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="First Name" required />
+      
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="Last Name" required />
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email Address" required />
+      
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="Phone Number" required />
+      
       <label for="message">Your Message</label>
       <textarea id="message" name="Message" required></textarea>
-
-      <button type="submit">Send Email</button>
+      
+      <button type="submit" class="submit-btn">Send Email</button>
     </form>
-  </main>
+  </section>
 
-  <footer class="contact-footer" role="contentinfo" aria-label="Contact options">
-    <a href="tel:+1234567890" id="footer-call-link">Call Us: +1 234 567 890</a>
-    <button id="footer-live-chat" aria-label="Start live chat">Live Chat</button>
+  <footer>
+    &copy; 2025 ElitesPro. All rights reserved.
+    <br />
+    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
   </footer>
 
   <script>
-    // Dropdown toggle functionality
-    document.querySelectorAll('.dropdown-toggle').forEach(button => {
-      button.addEventListener('click', () => {
-        const dropdown = button.parentElement;
-        const expanded = button.getAttribute('aria-expanded') === 'true' || false;
-        button.setAttribute('aria-expanded', !expanded);
-        dropdown.classList.toggle('show');
-
-        // Close other dropdowns if open
-        document.querySelectorAll('.dropdown').forEach(otherDropdown => {
-          if (otherDropdown !== dropdown) {
-            otherDropdown.classList.remove('show');
-            otherDropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    mobileMenuToggle.addEventListener('click', () => {
+      const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+      mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('show');
+    });
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = toggle.parentElement;
+          const isOpen = parent.classList.contains('open');
+          if (isOpen) {
+            parent.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+          } else {
+            document.querySelectorAll('.dropdown.open').forEach(d => {
+              d.classList.remove('open');
+              d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+            });
+            parent.classList.add('open');
+            toggle.setAttribute('aria-expanded', true);
           }
-        });
+        }
       });
     });
-
-    // Close dropdowns when clicking outside
-    window.addEventListener('click', (e) => {
-      if (!e.target.matches('.dropdown-toggle')) {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-          dropdown.classList.remove('show');
-          dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
         });
       }
     });
-
-    // Scroll to email form on "Email Us" link click
-    document.getElementById('email-us-link').addEventListener('click', e => {
-      e.preventDefault();
-      document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
-      // Close dropdown after click
-      const dropdown = document.getElementById('contact-dropdown');
-      dropdown.classList.remove('show');
-      dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
-    });
-
-    // Footer live chat button redirects to 3CX web client
-    document.getElementById('footer-live-chat').addEventListener('click', () => {
-      window.open('https://your-3cx-web-client-link', '_blank', 'noopener');
-    });
-
-    // Optional: Footer call link behavior handled by tel: protocol
   </script>
 </body>
 </html>
