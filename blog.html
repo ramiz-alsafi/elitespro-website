@@ -3,59 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ElitesPro Blog - Insights on customer service, automation, and outsourcing." />
   <title>ElitesPro Blog</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/scripts.js" defer></script>
-  <link rel="icon" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <h1>ElitesPro Blog</h1>
-    <p>Insights, Tips, and Strategies from Our Experts</p>
+    <h1>ElitesPro</h1>
+    <p>Elite Customer Support Solutions, Powered by People & Technology</p>
   </header>
 
-  <!-- Navigation -->
+  <button class="mobile-nav-toggle">Menu</button>
   <nav>
-    <div class="logo">ElitesPro</div>
-    <div class="toggle-btn">☰</div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="services/inbound.html">Services</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="services/inbound.html">Inbound Support</a>
+        <a href="services/chat.html">Live Chat Support</a>
+        <a href="services/omnichannel.html">Omnichannel</a>
+        <a href="services/ai.html">AI Assistant</a>
+        <a href="services/crm.html">CRM Integration</a>
+        <a href="services/analytics.html">Analytics & QA</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Blog Content -->
+  <section class="hero">
+    <h2>Insights & Updates from ElitesPro</h2>
+    <p>Stay ahead with our latest tips, case studies, and thoughts on customer experience, AI, and outsourcing trends.</p>
+  </section>
+
   <section class="services">
     <h3>Latest Articles</h3>
     <div class="service-grid">
       <div class="service-card">
-        <h4>Why Outsourcing Customer Support is a Smart Move</h4>
-        <p>Explore how outsourcing can streamline operations, save costs, and improve service quality.</p>
+        <img src="assets/trend-analysis.jpg" alt="CX Trends" />
+        <h4>Top CX Trends in 2025</h4>
+        <p>Discover the future of customer service — from automation to human-first strategies.</p>
       </div>
       <div class="service-card">
-        <h4>Top CRM Tools for Small Businesses</h4>
-        <p>A review of popular CRM platforms and how to choose the right one for your business needs.</p>
+        <img src="assets/agent-coaching.jpg" alt="Agent Coaching" />
+        <h4>Training Remote Support Teams</h4>
+        <p>How to coach, motivate, and scale high-performance remote support agents.</p>
       </div>
       <div class="service-card">
-        <h4>Live Chat Support: Benefits & Best Practices</h4>
-        <p>Learn how live chat can boost conversions and customer satisfaction in real time.</p>
+        <img src="assets/chatbot-handshake.jpg" alt="AI Integration" />
+        <h4>AI & Human Collaboration</h4>
+        <p>Blending automation and empathy for better customer experiences and faster service.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
     <p>
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact-email.html">Email Us</a> |
+      <a href="https://www.elitespro.online/3cx">Call Us</a> |
+      <a href="https://www.elitespro.online/3cx">Start Live Chat</a>
     </p>
   </footer>
 
+  <script>
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
