@@ -1,6 +1,11 @@
-/* Base setup */
-body {
+/* Reset & Base */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Inter', sans-serif;
   background-color: #f8fafc;
   color: #1e293b;
@@ -27,28 +32,48 @@ header {
 
 header h1 {
   font-size: 2.8rem;
-  margin: 0;
 }
 
+/* Navigation */
 nav {
   background: #1e293b;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
 }
 
-nav a {
+nav .logo {
+  color: #e2e8f0;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav .menu {
+  display: flex;
+  gap: 25px;
+}
+
+nav .menu a {
   color: #e2e8f0;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
-nav a:hover {
+nav .menu a:hover {
   color: #38bdf8;
 }
 
-/* Hero */
+/* Mobile Menu Toggle */
+nav .toggle-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero {
   padding: 80px 20px;
   background: linear-gradient(to right, #0f172a, #1e293b);
@@ -83,7 +108,7 @@ nav a:hover {
   background-color: #0ea5e9;
 }
 
-/* Services section */
+/* Services Section */
 .services {
   max-width: 1100px;
   margin: 60px auto;
@@ -145,19 +170,30 @@ footer a:hover {
   color: #0ea5e9;
 }
 
-/* Responsive tweaks */
+/* Responsive Layout */
 @media (max-width: 768px) {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e293b;
+    margin-top: 15px;
+  }
+
+  nav .menu.active {
+    display: flex;
+  }
+
+  nav .toggle-btn {
+    display: block;
+  }
+
   .hero h2 {
     font-size: 2rem;
   }
 
   .hero p {
     font-size: 1.1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 10px;
   }
 
   .service-grid {
