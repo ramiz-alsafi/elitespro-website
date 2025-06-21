@@ -3,195 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Get in touch with ElitesPro through email, call, or live chat. We're here to support you." />
   <title>Contact Us | ElitesPro</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header, footer {
-      background-color: #1e1e2f;
-      color: white;
-      padding: 20px 0;
-    }
-
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .main-nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    h1.logo a {
-      color: white;
-      text-decoration: none;
-    }
-
-    main h2 {
-      margin-top: 20px;
-      font-size: 28px;
-      text-align: center;
-    }
-
-    .contact-options {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px 0;
-    }
-
-    .contact-options button {
-      padding: 15px 25px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    .btn-email {
-      background-color: #007bff;
-      color: white;
-    }
-
-    .btn-whatsapp {
-      background-color: #25d366;
-      color: white;
-    }
-
-    .contact-form {
-      display: none;
-      margin-top: 30px;
-      border-top: 1px solid #ccc;
-      padding-top: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    .btn-submit {
-      background-color: #007bff;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .btn-submit:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      text-align: center;
-    }
-  </style>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-      <h1 class="logo"><a href="index.html">ElitesPro</a></h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services/chat.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Header -->
+  <header>
+    <h1>Contact Us</h1>
   </header>
 
-  <main class="container">
-    <h2>Get in Touch</h2>
-    <p style="text-align: center;">Choose how you want to contact us:</p>
-
-    <div class="contact-options">
-      <button class="btn-email" onclick="showEmailForm()">Send Email</button>
-      <a href="https://wa.me/201002921824" target="_blank">
-        <button class="btn-whatsapp">Chat on WhatsApp</button>
-      </a>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services/inbound.html">Services</a>
+    <div class="dropdown">
+      <a href="contact.html" class="active">Contact ▼</a>
+      <div class="dropdown-content">
+        <a href="contact-email.html">Email Us</a>
+        <a href="https://elitespro.3cx.us">Call Us</a>
+        <a href="https://elitespro.3cx.us">Start Live Chat</a>
+      </div>
     </div>
+    <a href="blog.html">Blog</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services/inbound.html">Services</a>
+    <a href="contact-email.html">Email Us</a>
+    <a href="https://elitespro.3cx.us">Call Us</a>
+    <a href="https://elitespro.3cx.us">Start Live Chat</a>
+    <a href="blog.html">Blog</a>
+  </div>
 
-    <div class="contact-form" id="emailForm">
-      <h3>Send Us an Email</h3>
-      <form action="mailto:ramizalsafi862@gmail.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="First Name" required />
-        </div>
+  <!-- Main Content -->
+  <section class="hero">
+    <h2>We’re Here to Help</h2>
+    <p>Whether you need support, want to learn more about our services, or just say hello — we’re ready to connect with you.</p>
+  </section>
 
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="Last Name" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="Phone Number" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="Email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="Message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+  <section class="services">
+    <h3>Contact Options</h3>
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Email Us</h4>
+        <p>Fill out our <a href="contact-email.html">contact form</a> and we’ll reply within 24 hours.</p>
+      </div>
+      <div class="service-card">
+        <h4>Call Us</h4>
+        <p>Reach us via our 3CX web client for instant voice support.</p>
+        <a href="https://elitespro.3cx.us" class="cta-button" target="_blank">Call Now</a>
+      </div>
+      <div class="service-card">
+        <h4>Live Chat</h4>
+        <p>Start a chat with one of our support agents via 3CX live chat.</p>
+        <a href="https://elitespro.3cx.us" class="cta-button" target="_blank">Chat Now</a>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="main-footer">
-    <div class="container">
-      <p><strong>Email:</strong> <a href="mailto:ramizalsafi862@gmail.com">ramizalsafi862@gmail.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/201002921824" target="_blank">+20 100 292 1824</a></p>
-      <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ElitesPro. All rights reserved. | <a href="contact-email.html">Email Us</a> | <a href="https://elitespro.3cx.us">Call or Chat</a></p>
   </footer>
 
+  <!-- JS Toggle Script -->
   <script>
-    function showEmailForm() {
-      document.getElementById("emailForm").style.display = "block";
-      window.scrollTo({
-        top: document.getElementById("emailForm").offsetTop - 20,
-        behavior: "smooth"
-      });
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
     }
   </script>
 </body>
