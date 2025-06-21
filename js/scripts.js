@@ -23,3 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+});
