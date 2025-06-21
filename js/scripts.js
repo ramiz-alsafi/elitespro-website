@@ -12,3 +12,14 @@ document.addEventListener('click', function(event) {
 });
 
 // You can expand this file later for more interactivity
+// Mobile menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-btn");
+  const menu = document.querySelector(".menu");
+
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+});
