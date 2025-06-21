@@ -4,19 +4,361 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Live Chat Support | ElitesPro</title>
-  <!-- Same styles as inbound.html (can be externalized to CSS) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    /* Same styles as inbound.html */
-    /* ... (Omitted here for brevity but same as inbound.html) */
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f7f9fb;
+      color: #222;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Header and Navigation */
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideIn 1s ease forwards;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header h1 a {
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      display: inline-block;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #38bdf8;
+      outline: none;
+    }
+
+    /* Dropdown menus - Adjusted selector for div.dropdown-menu */
+    nav ul li .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #1e293b;
+      min-width: 180px;
+      border-radius: 6px;
+      padding: 10px 0;
+      display: none; /* Hidden by default */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 200;
+    }
+
+    /* Show dropdown on hover/focus-within */
+    nav ul li:hover > .dropdown-menu,
+    nav ul li:focus-within > .dropdown-menu {
+      display: block;
+    }
+
+    nav ul li .dropdown-menu a { /* Targeting links inside the dropdown */
+      padding: 10px 20px;
+      color: #e2e8f0;
+      font-weight: 500;
+      display: block;
+    }
+
+    nav ul li .dropdown-menu a:hover,
+    nav ul li .dropdown-menu a:focus {
+      background-color: #0ea5e9;
+      color: white;
+      outline: none;
+    }
+
+    /* Hero Section (Note: This section is defined in CSS but not present in your provided HTML for chat.html) */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      font-size: 1.2rem;
+      color: #475569;
+    }
+
+    .btn-primary {
+      background-color: #38bdf8;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(56, 221, 248, 0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #0ea5e9;
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    /* What's New Section (Not present in your provided HTML for chat.html) */
+    .whats-new {
+      background: white;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .whats-new h3 {
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 6px;
+    }
+
+    .whats-new ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #475569;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .whats-new ul li {
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    /* Features Section (Not present in your provided HTML for chat.html) */
+    .features {
+      max-width: 900px;
+      margin: 50px auto 80px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .features article {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .features article:hover,
+    .features article:focus-within {
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .features h3 {
+      margin-bottom: 12px;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .features p {
+      color: #475569;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .features a {
+      color: #38bdf8;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .features a:hover,
+    .features a:focus {
+      color: #0ea5e9;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 25px 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    .footer-contact { /* This class is in CSS but not used in your provided HTML footer */
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 1.1rem;
+    }
+
+    .footer-contact a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact a:hover,
+    .footer-contact a:focus {
+      color: #0ea5e9;
+      outline: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Mobile Menu Toggle button (hidden on desktop) */
+    #mobile-menu-toggle {
+        display: none; /* Hidden by default for desktop */
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 400; /* Ensure it's above other elements */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        #mobile-menu-toggle {
+            display: block; /* Show on mobile */
+        }
+
+        nav ul {
+            flex-direction: column;
+            background: #0f172a;
+            position: fixed;
+            top: 80px; /* Adjust if header height changes */
+            right: 0;
+            width: 250px; /* Slightly wider for better readability */
+            max-width: 80vw; /* Ensure it doesn't overflow small screens */
+            height: calc(100vh - 80px);
+            padding-top: 20px;
+            display: none; /* Hidden by default, toggled by JS */
+            z-index: 300;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* Add a shadow for better visibility */
+            transform: translateX(100%); /* Start off-screen */
+            transition: transform 0.3s ease-out; /* Smooth transition */
+        }
+
+        nav ul.show {
+            display: flex; /* Make it visible */
+            transform: translateX(0%); /* Slide into view */
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+            width: 100%; /* Ensure full width for list items */
+        }
+
+        nav ul li a,
+        nav ul li .dropdown-toggle { /* Apply padding/styles to both links and dropdown buttons */
+            padding: 12px 25px; /* More padding for touch targets */
+            text-align: left;
+            width: 100%;
+        }
+
+        nav ul li .dropdown-menu {
+            position: static;
+            box-shadow: none;
+            background: rgba(0,0,0,0.2); /* Slightly darker for sub-menu */
+            padding-left: 30px; /* Indent sub-menu items */
+            border-radius: 0; /* No border radius for inner menu */
+            min-width: unset; /* Remove min-width for mobile */
+        }
+
+        nav ul li .dropdown-menu a {
+            padding: 10px 0; /* Adjust padding for sub-menu links */
+        }
+
+        /* Adjust main content for mobile */
+        main {
+            padding: 20px; /* Add some padding to main content */
+        }
+
+        .features {
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+        }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1><a href="../index.html" style="color: white; text-decoration: none;">ElitesPro</a></h1>
-
     <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-
     <nav>
       <ul id="main-nav">
         <li><a href="../index.html">Home</a></li>
@@ -57,4 +399,69 @@
     &copy; 2025 ElitesPro. All rights reserved.
     <br />
     <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
- 
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9534b6b4fdad704e","version":"2025.6.2","r":1,"token":"e0d9ecd35f264b0d81a16d8a753d28b9","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+      // Toggle mobile menu visibility
+      mobileMenuToggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mainNav.classList.toggle('show');
+        // Add or remove inert attribute for accessibility
+        if (mainNav.classList.contains('show')) {
+            mainNav.removeAttribute('inert');
+        } else {
+            mainNav.setAttribute('inert', '');
+        }
+      });
+
+      // Handle dropdown toggling for accessibility and mobile
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const parentLi = this.closest('.dropdown');
+          const dropdownMenu = parentLi.querySelector('.dropdown-menu');
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+          // Close all other open dropdowns except the current one
+          document.querySelectorAll('.dropdown-toggle[aria-expanded="true"]').forEach(otherToggle => {
+            if (otherToggle !== this) {
+              otherToggle.setAttribute('aria-expanded', 'false');
+              otherToggle.closest('.dropdown').querySelector('.dropdown-menu').style.display = 'none';
+            }
+          });
+
+          // Toggle current dropdown
+          this.setAttribute('aria-expanded', !isExpanded);
+          dropdownMenu.style.display = isExpanded ? 'none' : 'block';
+        });
+      });
+
+      // Close mobile menu or dropdowns if clicked outside
+      document.addEventListener('click', function(event) {
+          if (mainNav.classList.contains('show') && !mainNav.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+              mobileMenuToggle.setAttribute('aria-expanded', 'false');
+              mainNav.classList.remove('show');
+              mainNav.setAttribute('inert', ''); // Add inert when hidden
+          }
+
+          dropdownToggles.forEach(toggle => {
+              const parentLi = toggle.closest('.dropdown');
+              if (toggle.getAttribute('aria-expanded') === 'true' && !parentLi.contains(event.target)) {
+                  toggle.setAttribute('aria-expanded', 'false');
+                  parentLi.querySelector('.dropdown-menu').style.display = 'none';
+              }
+          });
+      });
+
+      // Initialize inert state
+      mainNav.setAttribute('inert', '');
+    });
+  </script>
+</body>
+</html>
