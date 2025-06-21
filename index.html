@@ -3,66 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ElitesPro - Smart Customer Support Solutions</title>
+  <meta name="description" content="ElitesPro - Exceptional customer support outsourcing powered by technology, people, and performance." />
+  <title>ElitesPro - Customer Support Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/scripts.js" defer></script>
-  <link rel="icon" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <h1>ElitesPro</h1>
-    <p>Smart Outsourcing for Smarter Businesses</p>
+    <p>Elite Customer Support Solutions, Powered by People & Technology</p>
   </header>
 
-  <!-- Navigation -->
+  <button class="mobile-nav-toggle">Menu</button>
   <nav>
-    <div class="logo">ElitesPro</div>
-    <div class="toggle-btn">☰</div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="services/inbound.html">Services</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="services/inbound.html">Inbound Support</a>
+        <a href="services/chat.html">Live Chat Support</a>
+        <a href="services/omnichannel.html">Omnichannel</a>
+        <a href="services/ai.html">AI Assistant</a>
+        <a href="services/crm.html">CRM Integration</a>
+        <a href="services/analytics.html">Analytics & QA</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
-    <h2>Elevate Your Customer Experience</h2>
-    <p>Outsource your customer support to a trusted partner who delivers excellence with every interaction.</p>
+    <h2>Customer Support that Scales with You</h2>
+    <p>Reliable, secure, and high-performance outsourced support tailored for startups, enterprises, and everything in between.</p>
     <a href="contact.html" class="cta-button">Get Started</a>
   </section>
 
-  <!-- Services Preview -->
   <section class="services">
-    <h3>What We Offer</h3>
+    <h3>Our Core Services</h3>
     <div class="service-grid">
       <div class="service-card">
-        <h4>Inbound Support</h4>
-        <p>Professional call handling for customer inquiries, orders, and technical support.</p>
+        <img src="assets/admin-support.jpg" alt="Admin Support" />
+        <h4>Inbound Customer Support</h4>
+        <p>24/7 phone and email support delivered by trained agents using your tools and tone.</p>
       </div>
       <div class="service-card">
-        <h4>Live Chat</h4>
-        <p>Fast, real-time assistance for your website visitors with our trained chat agents.</p>
+        <img src="assets/agent-chat.jpg" alt="Live Chat Support" />
+        <h4>Live Chat & Messaging</h4>
+        <p>Fast, personalized live chat for websites, apps, and social channels.</p>
       </div>
       <div class="service-card">
-        <h4>CRM Integration</h4>
-        <p>We help you track and manage leads, tickets, and customer data with precision.</p>
+        <img src="assets/omnichannel Interface.jpg" alt="Omnichannel Platform" />
+        <h4>Omnichannel Integration</h4>
+        <p>Centralize your support across email, WhatsApp, Messenger, and more.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/ai-support-agent.jpg" alt="AI Support Agent" />
+        <h4>AI Assistant Setup</h4>
+        <p>Deploy AI to automate FAQs, route tickets, and support your human team.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/crm-integration.jpg" alt="CRM Integration" />
+        <h4>CRM & Helpdesk Integration</h4>
+        <p>We work inside your CRM — no need to change tools. Just plug and play.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/analytics-dashboards.jpg" alt="Analytics Dashboard" />
+        <h4>Analytics & QA Monitoring</h4>
+        <p>Insightful dashboards and agent performance tracking to ensure quality.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
     <p>
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact-email.html">Email Us</a> |
+      <a href="https://www.elitespro.online/3cx">Call Us</a> |
+      <a href="https://www.elitespro.online/3cx">Start Live Chat</a>
     </p>
   </footer>
 
+  <script>
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
