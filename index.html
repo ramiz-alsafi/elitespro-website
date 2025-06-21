@@ -4,164 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElitesPro | Customer Support Outsourcing</title>
+  <meta name="description" content="ElitesPro offers elite customer support outsourcing including chat, email, voice, and social media services." />
+  <meta name="keywords" content="customer support, outsourcing, call center, live chat, email support, voice support, social media management" />
+  <meta name="author" content="ElitesPro" />
+  <meta property="og:title" content="ElitesPro | Elite Customer Support Outsourcing" />
+  <meta property="og:description" content="Reliable, people-first remote support solutions for modern businesses." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background: #f7f9fb;
-      color: #222;
-    }
-    header {
-      background-color: #0f172a;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      animation: slideIn 1s ease forwards;
-      position: relative;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover,
-    nav button.dropdown-toggle:hover {
-      color: #38bdf8;
-      cursor: pointer;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #0f172a;
-      animation: fadeIn 2s ease;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.2rem;
-      color: #475569;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 30px;
-      border-radius: 1rem;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #0f172a;
-      text-align: center;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .service {
-      background-color: white;
-      border-radius: 1rem;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-    .service h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #1e293b;
-    }
-    .service p {
-      font-size: 1rem;
-      color: #475569;
-    }
-    footer {
-      background: #0f172a;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer a {
-      color: #38bdf8;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      color: #0f172a;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-      border-radius: 0.5rem;
-    }
-    .dropdown-content a {
-      color: #0f172a;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover {
-      background-color: #f1f5f9;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div style="font-size: 1.5rem; font-weight: bold;">ElitesPro</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
       <div class="dropdown">
         <button class="dropdown-toggle" style="background:none;border:none;color:white;font-weight:600;">Services</button>
         <div class="dropdown-content">
-          <a href="#">Live Chat Support</a>
-          <a href="#">Email Support</a>
-          <a href="#">Voice Support</a>
-          <a href="#">Social Media Management</a>
+          <a href="live-chat-support.html">Live Chat Support</a>
+          <a href="email-support.html">Email Support</a>
+          <a href="voice-support.html">Voice Support</a>
+          <a href="social-media-management.html">Social Media Management</a>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropdown-toggle" style="background:none;border:none;color:white;font-weight:600;">Contact</button>
         <div class="dropdown-content">
-          <a href="mailto:ramizalsafi@www.elitespro.online">Email Us</a>
+          <a href="contact.html">Email Us</a>
           <a href="https://app.3cx.com">Call Us</a>
           <a href="https://app.3cx.com">Start Live Chat</a>
         </div>
@@ -172,7 +44,7 @@
   <section class="hero">
     <h1>Elevate Your Customer Support</h1>
     <p>ElitesPro delivers elite, people-first outsourced support solutions so you can focus on growing your business.</p>
-    <img src="https://via.placeholder.com/500x300" alt="Customer support illustration" />
+    <img src="assets/hero-support.jpg" alt="Friendly customer support team" />
   </section>
 
   <section>
@@ -196,6 +68,7 @@
       </div>
     </div>
   </section>
+
   <section>
     <h2 class="section-title">Why Choose Us</h2>
     <p style="text-align:center; max-width:700px; margin:auto; color:#475569;">
@@ -204,12 +77,15 @@
   </section>
 
   <footer>
-    <p>Contact us: <a href="mailto:ramizalsafi@www.elitespro.online">Email</a> | <a href="https://app.3cx.com">Call</a> | <a href="https://app.3cx.com">Live Chat</a></p>
+    <p>Contact us: 
+      <a href="mailto:ramizalsafi@www.elitespro.online">Email</a> | 
+      <a href="https://app.3cx.com">Call</a> | 
+      <a href="https://app.3cx.com">Live Chat</a>
+    </p>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
   </footer>
 
   <script>
-    // Simple page transition effect
     document.querySelectorAll("nav a, .dropdown-content a").forEach(link => {
       link.addEventListener("click", function(e) {
         if (this.href && this.href.startsWith("#")) return;
