@@ -5,54 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog | ElitesPro</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    /* Same styles as about.html */
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1><a href="index.html" style="color: white; text-decoration: none;">ElitesPro</a></h1>
-    <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-    <nav>
-      <ul id="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown" id="services-dropdown">
-          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services ▼</button>
-          <div class="dropdown-menu" aria-label="Services submenu">
-            <a href="services/inbound.html">Inbound Support</a>
-            <a href="services/chat.html">Live Chat Support</a>
-            <a href="services/crm.html">CRM Integration</a>
-            <a href="services/tech.html">Tech Setup & Automation</a>
-            <a href="services/multilingual.html">Multilingual Support</a>
-          </div>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="dropdown" id="contact-dropdown">
-          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact ▼</button>
-          <div class="dropdown-menu" aria-label="Contact submenu">
-            <a href="contact.html#email-form-section">Email Us</a>
-            <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
-            <a href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">ElitesPro</a></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Services ▼</button>
+            <div class="dropdown-content">
+              <a href="services/inbound.html">Inbound Support</a>
+              <a href="services/chat.html">Live Chat Support</a>
+              <a href="services/crm.html">CRM Integration</a>
+              <a href="services/tech.html">Tech Setup & Automation</a>
+              <a href="services/multilingual.html">Multilingual Support</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Contact ▼</button>
+            <div class="dropdown-content">
+              <a href="contact.html#email-form-section">Email Us</a>
+              <a href="tel:+19313408943">Call Us: +1 (931) 340-8943</a>
+              <a href="https://1309.3cx.cloud/#/office/voice-and-chat" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>ElitesPro Blog</h1>
-    <p>Coming soon: articles and updates about customer support, tech, and industry trends.</p>
+  <main class="blog-main">
+    <section class="blog-hero">
+      <div class="container">
+        <h2>ElitesPro Blog</h2>
+        <p>Coming soon: tips, insights, and stories about exceptional support, tech, and growth.</p>
+        <div class="coming-soon-box">
+          <p><em>We’re currently preparing our first posts — check back soon!</em></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2025 ElitesPro. All rights reserved.
-    <br />
-    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 ElitesPro. All rights reserved.</p>
+      <a class="chat-button" href="https://1309.3cx.cloud/#/office/voice-and-chat" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+    </div>
   </footer>
-
-  <script>
-    /* Same JS for mobile menu and dropdown toggles */
-  </script>
 </body>
 </html>
