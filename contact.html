@@ -1,82 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Get in touch with ElitesPro through email, call, or live chat. We're here to support you." />
-  <title>Contact Us | ElitesPro</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <h1>Contact Us</h1>
-  </header>
+.contact-form {
+  max-width: 700px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services/inbound.html">Services</a>
-    <div class="dropdown">
-      <a href="contact.html" class="active">Contact ▼</a>
-      <div class="dropdown-content">
-        <a href="contact-email.html">Email Us</a>
-        <a href="https://elitespro.3cx.us">Call Us</a>
-        <a href="https://elitespro.3cx.us">Start Live Chat</a>
-      </div>
-    </div>
-    <a href="blog.html">Blog</a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services/inbound.html">Services</a>
-    <a href="contact-email.html">Email Us</a>
-    <a href="https://elitespro.3cx.us">Call Us</a>
-    <a href="https://elitespro.3cx.us">Start Live Chat</a>
-    <a href="blog.html">Blog</a>
-  </div>
+.contact-form .form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-  <!-- Main Content -->
-  <section class="hero">
-    <h2>We’re Here to Help</h2>
-    <p>Whether you need support, want to learn more about our services, or just say hello — we’re ready to connect with you.</p>
-  </section>
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
 
-  <section class="services">
-    <h3>Contact Options</h3>
-    <div class="service-grid">
-      <div class="service-card">
-        <h4>Email Us</h4>
-        <p>Fill out our <a href="contact-email.html">contact form</a> and we’ll reply within 24 hours.</p>
-      </div>
-      <div class="service-card">
-        <h4>Call Us</h4>
-        <p>Reach us via our 3CX web client for instant voice support.</p>
-        <a href="https://elitespro.3cx.us" class="cta-button" target="_blank">Call Now</a>
-      </div>
-      <div class="service-card">
-        <h4>Live Chat</h4>
-        <p>Start a chat with one of our support agents via 3CX live chat.</p>
-        <a href="https://elitespro.3cx.us" class="cta-button" target="_blank">Chat Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 ElitesPro. All rights reserved. | <a href="contact-email.html">Email Us</a> | <a href="https://elitespro.3cx.us">Call or Chat</a></p>
-  </footer>
-
-  <!-- JS Toggle Script -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
-</body>
-</html>
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
