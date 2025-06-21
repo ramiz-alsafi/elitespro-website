@@ -7,204 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     /* Same styles as about.html */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background: #f7f9fb;
-      color: #222;
-    }
-    header {
-      background-color: #0f172a;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      animation: slideIn 1s ease forwards;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    nav a, nav button.dropdown-toggle {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      background: none;
-      border: none;
-      font-size: 1rem;
-      padding: 0;
-    }
-    nav a:hover, nav button.dropdown-toggle:hover {
-      color: #38bdf8;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    h1 {
-      font-weight: 800;
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      color: #0f172a;
-      text-align: center;
-    }
-    article {
-      margin-bottom: 30px;
-      border-bottom: 1px solid #cbd5e1;
-      padding-bottom: 20px;
-    }
-    h2 {
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #334155;
-      text-align: justify;
-    }
-    footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 30px;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 50px;
-      position: relative;
-    }
-    .chat-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background-color: #38bdf8;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .chat-button:hover {
-      background-color: #0ea5e9;
-      transform: translateY(-2px);
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    nav ul li {
-      position: relative;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: #0f172a;
-      min-width: 180px;
-      border-radius: 6px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      top: 100%;
-      left: 0;
-      z-index: 1000;
-      flex-direction: column;
-      padding: 0.5rem 0;
-    }
-    .dropdown-menu a {
-      color: #e2e8f0;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: block;
-      font-weight: 500;
-    }
-    .dropdown-menu a:hover {
-      background-color: #1e293b;
-      color: #38bdf8;
-    }
-    .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
-      display: flex;
-    }
-    #mobile-menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: #38bdf8;
-      cursor: pointer;
-      user-select: none;
-      position: absolute;
-      top: 18px;
-      right: 40px;
-    }
-    @media (max-width: 768px) {
-      header {
-        padding: 20px;
-      }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #0f172a;
-        position: fixed;
-        top: 60px;
-        right: 0;
-        width: 220px;
-        padding: 1rem 0;
-        border-radius: 0 0 0 12px;
-        box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
-        z-index: 2000;
-        height: calc(100vh - 60px);
-        overflow-y: auto;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      nav ul li {
-        margin: 0.5rem 0;
-      }
-      nav ul li a,
-      nav ul li button.dropdown-toggle {
-        color: #e2e8f0;
-        padding: 10px 20px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        width: 100%;
-        text-align: left;
-      }
-      .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background-color: transparent;
-        padding-left: 1rem;
-        display: none !important;
-      }
-      .dropdown.open > .dropdown-menu {
-        display: flex !important;
-        flex-direction: column;
-      }
-      #mobile-menu-toggle {
-        display: block;
-      }
-    }
   </style>
 </head>
 <body>
@@ -225,7 +27,7 @@
           </div>
         </li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li class="dropdown" id="contact-dropdown">
           <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact ▼</button>
           <div class="dropdown-menu" aria-label="Contact submenu">
@@ -238,4 +40,19 @@
     </nav>
   </header>
 
-  <s
+  <main>
+    <h1>ElitesPro Blog</h1>
+    <p>Coming soon: articles and updates about customer support, tech, and industry trends.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 ElitesPro. All rights reserved.
+    <br />
+    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+  </footer>
+
+  <script>
+    /* Same JS for mobile menu and dropdown toggles */
+  </script>
+</body>
+</html>
