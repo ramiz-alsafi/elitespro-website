@@ -1,11 +1,6 @@
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Base Setup */
 body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f8fafc;
   color: #1e293b;
@@ -32,48 +27,60 @@ header {
 
 header h1 {
   font-size: 2.8rem;
+  margin: 0;
 }
 
 /* Navigation */
 nav {
   background: #1e293b;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 20px;
+  gap: 30px;
+  padding: 15px;
   flex-wrap: wrap;
 }
 
-nav .logo {
-  color: #e2e8f0;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-nav .menu {
-  display: flex;
-  gap: 25px;
-}
-
-nav .menu a {
+nav a {
   color: #e2e8f0;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
-nav .menu a:hover {
+nav a:hover {
   color: #38bdf8;
 }
 
-/* Mobile Menu Toggle */
-nav .toggle-btn {
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
   display: none;
-  font-size: 1.5rem;
+  background: none;
+  border: none;
   color: #e2e8f0;
+  font-size: 1.5rem;
+  padding: 10px;
   cursor: pointer;
 }
 
-/* Hero Section */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
+
+/* Hero */
 .hero {
   padding: 80px 20px;
   background: linear-gradient(to right, #0f172a, #1e293b);
@@ -170,24 +177,8 @@ footer a:hover {
   color: #0ea5e9;
 }
 
-/* Responsive Layout */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1e293b;
-    margin-top: 15px;
-  }
-
-  nav .menu.active {
-    display: flex;
-  }
-
-  nav .toggle-btn {
-    display: block;
-  }
-
   .hero h2 {
     font-size: 2rem;
   }
