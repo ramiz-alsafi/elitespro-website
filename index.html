@@ -3,100 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ElitesPro - Exceptional customer support outsourcing powered by technology, people, and performance." />
-  <title>ElitesPro - Customer Support Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <title>ElitesPro | Customer Support Outsourcing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f7f9fb;
+      color: #222;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideIn 1s ease forwards;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav a {
+      margin-left: 20px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0f172a;
+      animation: fadeIn 2s ease;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+      color: #475569;
+    }
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .images img {
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .value {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #38bdf8;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+    }
+    .value h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .value p {
+      color: #475569;
+      line-height: 1.6;
+    }
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>ElitesPro</h1>
-    <p>Elite Customer Support Solutions, Powered by People & Technology</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#values">Our Values</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Mobile Toggle -->
-  <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
-
-  <!-- Navigation -->
-  <nav id="main-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-    <div class="dropdown">
-      <a href="#">Services</a>
-      <div class="dropdown-content">
-        <a href="services/inbound.html">Inbound Support</a>
-        <a href="services/chat.html">Live Chat Support</a>
-        <a href="services/omnichannel.html">Omnichannel</a>
-        <a href="services/ai.html">AI Assistant</a>
-        <a href="services/crm.html">CRM Integration</a>
-        <a href="services/analytics.html">Analytics & QA</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
   <section class="hero">
-    <h2>Customer Support that Scales with You</h2>
-    <p>Reliable, secure, and high-performance outsourced support tailored for startups, enterprises, and everything in between.</p>
-    <a href="contact.html" class="cta-button">Get Started</a>
+    <h1>Next-Level Customer Support</h1>
+    <p>We help businesses shine with creative, unified, and integrity-driven customer care experiences — powered by people who care.</p>
+    <div class="images">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Customer-service-agent.jpg/640px-Customer-service-agent.jpg" alt="Smiling female support agent" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Customer-service-rep.jpg/640px-Customer-service-rep.jpg" alt="Smiling male support agent" />
+    </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services">
-    <h3>Our Core Services</h3>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/admin-support.jpg" alt="Admin Support">
-        <h4>Inbound Customer Support</h4>
-        <p>24/7 phone and email support delivered by trained agents using your tools and tone.</p>
+  <section id="values">
+    <h2>Our Core Values</h2>
+    <div class="values">
+      <div class="value">
+        <h3>Creative Precision</h3>
+        <p>We think outside the box — but we master what’s inside it first. Our agents are not just voices — they’re solvers, thinkers, and creators.</p>
       </div>
-      <div class="service-card">
-        <img src="assets/agent-chat.jpg" alt="Live Chat Support">
-        <h4>Live Chat & Messaging</h4>
-        <p>Fast, personalized live chat for websites, apps, and social channels.</p>
+      <div class="value">
+        <h3>Unified Excellence</h3>
+        <p>We act as one team, win as one team. Everyone contributes their best — skill, effort, or insight — and individual success builds our collective power.</p>
       </div>
-      <div class="service-card">
-        <img src="assets/omnichannel-interface.jpg" alt="Omnichannel Integration">
-        <h4>Omnichannel Integration</h4>
-        <p>Centralize your support across email, WhatsApp, Messenger, and more.</p>
+      <div class="value">
+        <h3>Bold Integrity</h3>
+        <p>We speak up, show up, and follow through. We’re transparent, trustworthy, and ethical — with clients and with each other.</p>
       </div>
-      <div class="service-card">
-        <img src="assets/ai-support-agent.jpg" alt="AI Assistant">
-        <h4>AI Assistant Setup</h4>
-        <p>Deploy AI to automate FAQs, route tickets, and support your human team.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/crm-integration.jpg" alt="CRM Integration">
-        <h4>CRM & Helpdesk Integration</h4>
-        <p>We work inside your CRM — no need to change tools. Just plug and play.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/analytics-dashboards.jpg" alt="Analytics Dashboard">
-        <h4>Analytics & QA Monitoring</h4>
-        <p>Insightful dashboards and agent performance tracking to ensure quality.</p>
+      <div class="value">
+        <h3>Customer Obsession</h3>
+        <p>We don’t just support customers — we care for them. Every call, every ticket, every moment counts toward world-class satisfaction.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-    <p>
-      <a href="contact-email.html">Email Us</a> |
-      <a href="https://www.elitespro.online/3cx">Call Us</a> |
-      <a href="https://www.elitespro.online/3cx">Start Live Chat</a>
-    </p>
+    <p>&copy; 2025 ElitesPro. All rights reserved. | Contact info coming soon.</p>
   </footer>
-
-  <!-- JS Toggle Script -->
-  <script>
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const nav = document.querySelector('nav');
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
