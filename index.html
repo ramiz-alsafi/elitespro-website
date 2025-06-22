@@ -4,8 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ElitesPro - Freelance Design, Web, Data & Support</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Inline CSS to rule out external file issues */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:sans-serif; background:#f9f9f9; color:#001f3f; line-height:1.6; padding:2rem; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; background:#001f3f; padding:1rem 2rem; color:#fff; }
+    .logo { font-size:1.5rem; font-weight:bold; }
+    .nav-links { list-style:none; display:flex; gap:1.5rem; }
+    .nav-links a { color:#fff; font-weight:600; }
+    .intro { text-align:center; margin-top:4rem; opacity:0; animation:fadeIn 1.5s ease forwards 0.5s; }
+    .btn-green { background:#2ecc40; color:#fff; padding:.75rem 1.5rem; margin-top:1.5rem; font-weight:700; border-radius:4px; display:inline-block; transition:background .3s; }
+    .btn-green:hover { background:#27ae37; }
+    footer { text-align:center; padding:2rem 0; background:#001f3f; color:#fff; margin-top:4rem; }
+    @keyframes fadeIn { to { opacity:1; } }
+  </style>
 </head>
 <body>
   <header>
@@ -18,20 +30,4 @@
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="intro fade-in">
-      <h1>Welcome to ElitesPro</h1>
-      <p>Your one-stop freelance hub for expert design, website development, data, and customer support solutions.</p>
-      <p>I'm Ramiz Alsafi, a multi-skilled freelancer offering creative graphic design, full website design and development from A to Z at minimal cost, data analysis with Python/SQL, and complete customer support including CRM setup and call center consulting.</p>
-      <a href="portfolio.html" class="btn-green">Explore Portfolio</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 ElitesPro. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+   
