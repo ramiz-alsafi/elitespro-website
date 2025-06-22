@@ -1,135 +1,117 @@
-/* Reset some default styles */
+/* Reset and base layout */
 * {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1e293b;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #001f3f; /* navy blue text */
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar {
+header {
+  background-color: #031e3e;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #001f3f; /* navy blue background */
-  padding: 1rem 2rem;
-  color: white;
 }
 
-.logo {
+header h1 {
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
+nav a {
   color: white;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
 }
 
-.nav-links a:hover {
-  color: #2ecc40; /* green accent */
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
-  padding: 80px 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
   text-align: center;
 }
 
-.intro {
-  text-align: center;
+.content {
+  max-width: 800px;
+  width: 100%;
 }
 
-.btn-green {
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.cta-button {
   display: inline-block;
-  background-color: #2ecc40; /* green */
+  margin-top: 2rem;
+  background-color: #22c55e;
   color: white;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1.5rem;
-  font-weight: 700;
-  border-radius: 4px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn-green:hover {
-  background-color: #27ae37; /* darker green */
-  cursor: pointer;
+.cta-button:hover {
+  background-color: #16a34a;
 }
 
 footer {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: #001f3f;
+  background-color: #031e3e;
   color: white;
-  margin-top: 4rem;
-}
-
-/* Simple fade-in animation */
-.fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 1.5s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeInAnimation {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive Nav */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; /* For now, simple hide nav on mobile */
-  }
-}
-.portfolio-section {
-  max-width: 960px;
-  margin: 0 auto 4rem;
-  padding: 2rem 1rem;
   text-align: center;
-  color: #001f3f;
+  padding: 1rem;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1.5rem;
-}
+/* Responsive layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.gallery a {
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  nav {
+    margin-top: 0.5rem;
+  }
 
-.gallery a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
-}
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 
-.gallery img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  height: 160px;
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
