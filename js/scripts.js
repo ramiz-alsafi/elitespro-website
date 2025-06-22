@@ -12,3 +12,31 @@ document.addEventListener('click', function(event) {
 });
 
 // You can expand this file later for more interactivity
+// Mobile menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-btn");
+  const menu = document.querySelector(".menu");
+
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".mobile-nav-toggle");
+  const nav = document.querySelector("nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+});
