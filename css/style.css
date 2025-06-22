@@ -257,3 +257,51 @@ footer a:hover {
 .contact-form button:hover {
   background-color: #0ea5e9;
 }
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e293b;
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: #e2e8f0;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #334155;
+  color: #38bdf8;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Responsive adjustments preserved */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+  }
+}
