@@ -1,0 +1,83 @@
+  <section>
+    <h2>Why Choose AI Assistants?</h2>
+    <div class="values">
+      <div class="value">
+        <h3>Instant Support 24/7</h3>
+        <p>AI assistants can instantly handle common customer queries — anytime, any day — freeing your human agents to focus on complex interactions.</p>
+      </div>
+      <div class="value">
+        <h3>Multilingual & Scalable</h3>
+        <p>Support customers in multiple languages and scale to handle thousands of chats at once — all without additional headcount.</p>
+      </div>
+      <div class="value">
+        <h3>Trained on Your Knowledge Base</h3>
+        <p>Your AI assistant is trained on your FAQs, policies, tone, and past conversations to provide reliable and context-aware replies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Integrations We Support</h2>
+    <p>We help you connect AI assistants to your existing platforms:</p>
+    <ul>
+      <li>3CX (voice/chat)</li>
+      <li>LiveChat, Tidio, Crisp</li>
+      <li>Zoho, HubSpot, Freshdesk</li>
+      <li>Custom API & CRM integrations</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 ElitesPro. All rights reserved.
+    <br />
+    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    mobileMenuToggle.addEventListener('click', () => {
+      const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+      mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('show');
+    });
+
+    // Dropdown toggle for mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const parent = toggle.parentElement;
+          const isOpen = parent.classList.contains('open');
+          if (isOpen) {
+            parent.classList.remove('open');
+            toggle.setAttribute('aria-expanded', false);
+          } else {
+            // Close other open dropdowns
+            document.querySelectorAll('.dropdown.open').forEach(d => {
+              d.classList.remove('open');
+              d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+            });
+            parent.classList.add('open');
+            toggle.setAttribute('aria-expanded', true);
+          }
+        }
+      });
+    });
+
+    // Close mobile menu and dropdowns when resizing window larger than mobile breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        mainNav.classList.remove('show');
+        mobileMenuToggle.setAttribute('aria-expanded', false);
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          d.classList.remove('open');
+          d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
