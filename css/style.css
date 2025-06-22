@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 body {
@@ -48,9 +48,8 @@ a {
 }
 
 main {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .intro {
