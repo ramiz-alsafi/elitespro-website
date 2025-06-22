@@ -1,4 +1,4 @@
-/* Reset and base layout */
+/* Reset & base layout */
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +13,16 @@ html, body {
   color: #1e293b;
 }
 
+/* Full height layout structure */
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
 }
 
+/* Header (Blue ribbon) */
 header {
+  width: 100%;
   background-color: #031e3e;
   color: white;
   padding: 1rem 2rem;
@@ -42,8 +46,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Main content area */
 main {
   flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,11 +57,13 @@ main {
   text-align: center;
 }
 
+/* Inner content block */
 .content {
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
 }
 
+/* Typography */
 .content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -67,8 +75,8 @@ main {
   color: #334155;
 }
 
+/* Button */
 .cta-button {
-  display: inline-block;
   margin-top: 2rem;
   background-color: #22c55e;
   color: white;
@@ -84,14 +92,17 @@ main {
   background-color: #16a34a;
 }
 
+/* Footer (Blue ribbon at the bottom) */
 footer {
+  width: 100%;
   background-color: #031e3e;
   color: white;
   text-align: center;
   padding: 1rem;
+  margin-top: auto;
 }
 
-/* Responsive layout */
+/* Responsive design */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
