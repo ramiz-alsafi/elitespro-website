@@ -1,0 +1,136 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #001f3f; /* navy blue text */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f3f; /* navy blue background */
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2ecc40; /* green accent */
+}
+
+main {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.btn-green {
+  display: inline-block;
+  background-color: #2ecc40; /* green */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-green:hover {
+  background-color: #27ae37; /* darker green */
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #001f3f;
+  color: white;
+  margin-top: 4rem;
+}
+
+/* Simple fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* For now, simple hide nav on mobile */
+  }
+}
+.portfolio-section {
+  max-width: 960px;
+  margin: 0 auto 4rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #001f3f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 160px;
+}
