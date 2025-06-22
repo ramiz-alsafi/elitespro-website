@@ -100,3 +100,44 @@ footer {
     display: none; /* For now, simple hide nav on mobile */
   }
 }
+/* === Portfolio Page === */
+.portfolio-section {
+  max-width: 960px;
+  margin: 0 auto 4rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #001f3f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 160px;
+  border-radius: 8px;
+}
+
+/* Hide Lightbox captions */
+.lb-data .lb-caption {
+  display: none !important;
+}
