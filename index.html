@@ -14,8 +14,11 @@
     <p>Elite Customer Support Solutions, Powered by People & Technology</p>
   </header>
 
-  <button class="mobile-nav-toggle">Menu</button>
-  <nav>
+  <!-- Mobile Toggle -->
+  <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -33,48 +36,51 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h2>Customer Support that Scales with You</h2>
     <p>Reliable, secure, and high-performance outsourced support tailored for startups, enterprises, and everything in between.</p>
     <a href="contact.html" class="cta-button">Get Started</a>
   </section>
 
+  <!-- Services Section -->
   <section class="services">
     <h3>Our Core Services</h3>
     <div class="service-grid">
       <div class="service-card">
-        <img src="assets/admin-support.jpg" alt="Admin Support" />
+        <img src="assets/admin-support.jpg" alt="Admin Support">
         <h4>Inbound Customer Support</h4>
         <p>24/7 phone and email support delivered by trained agents using your tools and tone.</p>
       </div>
       <div class="service-card">
-        <img src="assets/agent-chat.jpg" alt="Live Chat Support" />
+        <img src="assets/agent-chat.jpg" alt="Live Chat Support">
         <h4>Live Chat & Messaging</h4>
         <p>Fast, personalized live chat for websites, apps, and social channels.</p>
       </div>
       <div class="service-card">
-        <img src="assets/omnichannel Interface.jpg" alt="Omnichannel Platform" />
+        <img src="assets/omnichannel Interface.jpg" alt="Omnichannel Integration">
         <h4>Omnichannel Integration</h4>
         <p>Centralize your support across email, WhatsApp, Messenger, and more.</p>
       </div>
       <div class="service-card">
-        <img src="assets/ai-support-agent.jpg" alt="AI Support Agent" />
+        <img src="assets/ai-support-agent.jpg" alt="AI Assistant">
         <h4>AI Assistant Setup</h4>
         <p>Deploy AI to automate FAQs, route tickets, and support your human team.</p>
       </div>
       <div class="service-card">
-        <img src="assets/crm-integration.jpg" alt="CRM Integration" />
+        <img src="assets/crm-integration.jpg" alt="CRM Integration">
         <h4>CRM & Helpdesk Integration</h4>
         <p>We work inside your CRM — no need to change tools. Just plug and play.</p>
       </div>
       <div class="service-card">
-        <img src="assets/analytics-dashboards.jpg" alt="Analytics Dashboard" />
+        <img src="assets/analytics-dashboards.jpg" alt="Analytics Dashboard">
         <h4>Analytics & QA Monitoring</h4>
         <p>Insightful dashboards and agent performance tracking to ensure quality.</p>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
     <p>
@@ -84,9 +90,12 @@
     </p>
   </footer>
 
+  <!-- JS Toggle Script -->
   <script>
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-      document.querySelector('nav').classList.toggle('open');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('nav');
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
   </script>
 </body>
