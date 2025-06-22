@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.getElementById("gallery");
+  if (!gallery) return; // exit if not on portfolio page
 
   // Auto-generate 41 images named design1.jpg to design41.jpg
   for (let i = 1; i <= 41; i++) {
