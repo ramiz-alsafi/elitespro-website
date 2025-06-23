@@ -48,10 +48,28 @@ The portfolio section dynamically loads `design1.webp` through `design43.webp` u
 
 
 ---
-
+root/
+├── index.html
+├── about.html
+├── services.html
+├── contact.html
+├── portfolio.html
+├── css/
+│ └── style.css
+├── js/
+│ └── main.js
+└── portfolio/
+└── images/
+├── design1.webp to design43.webp
+├── og-image.jpg
+└── favicon.png
 Let me know if you'd like me to include:
 - Screenshots
 - GitHub Pages deployment instructions
 - Separate README sections for each service (Design, Data, Support)  
 I can tailor the README for portfolio or business audiences.
 
+🧠 Author
+Ramiz Alsafi
+Freelancer | Designer | Data Analyst | Customer Support Specialist
+https://www.elitespro.online
