@@ -1,18 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.getElementById("gallery");
 
-  // Auto-generate 41 images named design1.jpg to design41.jpg
-  for (let i = 1; i <= 41; i++) {
-    const imgName = `design${i}.jpg`;
-    const a = document.createElement("a");
-    a.href = `portfolio/images/${imgName}`;
-    a.setAttribute("data-lightbox", "portfolio");
+  if (gallery) {
+    for (let i = 1; i <= 43; i++) {
+      const imgName = `design${i}.webp`;
+      const a = document.createElement("a");
+      a.href = `portfolio/images/${imgName}`;
+      a.setAttribute("data-lightbox", "portfolio");
 
-    const img = document.createElement("img");
-    img.src = `portfolio/images/${imgName}`;
-    img.alt = `Design ${i}`;
+      const img = document.createElement("img");
+      img.src = `portfolio/images/${imgName}`;
+      img.alt = `Design ${i}`;
+      img.loading = "lazy";
 
-    a.appendChild(img);
-    gallery.appendChild(a);
+      a.appendChild(img);
+      gallery.appendChild(a);
+    }
+  }
+
+  const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   }
 });
