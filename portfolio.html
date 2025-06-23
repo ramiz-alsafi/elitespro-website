@@ -4,8 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | ElitesPro</title>
+  <meta name="description" content="Explore Ramiz Alsafi's freelance design portfolio including brand, logo, and web designs.">
+  <meta name="author" content="Ramiz Alsafi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.elitespro.online/portfolio.html" />
 
-  <!-- CSS Files -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio | ElitesPro" />
+  <meta property="og:description" content="A showcase of creative projects in branding and design by Ramiz Alsafi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.elitespro.online/portfolio.html" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/ramiz-alsafi/elitespro-website/main/portfolio/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | ElitesPro" />
+  <meta name="twitter:description" content="Freelance portfolio of Ramiz Alsafi in graphic and brand design." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/ramiz-alsafi/elitespro-website/main/portfolio/images/og-image.jpg" />
+
+  <link rel="icon" href="https://raw.githubusercontent.com/ramiz-alsafi/elitespro-website/main/portfolio/images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" />
 </head>
@@ -24,7 +41,7 @@
   </header>
 
   <main>
-    <section class="portfolio-section">
+    <section class="portfolio-section fade-in">
       <h1>My Design Portfolio</h1>
       <p>Browse a selection of my graphic and brand design work.</p>
       <div class="gallery" id="gallery"></div>
@@ -35,8 +52,10 @@
     <p>© 2025 ElitesPro. All rights reserved.</p>
   </footer>
 
-  <!-- JS Files -->
+  <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+
+  <!-- Image Gallery Script with Lazy Loading -->
+  <script>
+    const gallery = document.getElementById("gallery");
+    const baseURL = "https://raw.githubusercontent.com/ramiz-alsafi/elitespro-website/main/portfolio/images/
