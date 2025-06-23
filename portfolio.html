@@ -4,28 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | ElitesPro</title>
-  <meta name="description" content="Explore Ramiz Alsafi's freelance design portfolio including brand, logo, and web designs.">
-  <meta name="author" content="Ramiz Alsafi" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.elitespro.online/portfolio.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Portfolio | ElitesPro" />
-  <meta property="og:description" content="A showcase of creative projects in branding and design by Ramiz Alsafi." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.elitespro.online/portfolio.html" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/og-image.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portfolio | ElitesPro" />
-  <meta name="twitter:description" content="Freelance portfolio of Ramiz Alsafi in graphic and brand design." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/og-image.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/favicon.png" type="image/png" />
-
-  <!-- CSS -->
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" />
 </head>
@@ -44,7 +24,7 @@
   </header>
 
   <main>
-    <section class="portfolio-section fade-in">
+    <section class="portfolio-section">
       <h1>My Design Portfolio</h1>
       <p>Browse a selection of my graphic and brand design work.</p>
       <div class="gallery" id="gallery"></div>
@@ -55,29 +35,8 @@
     <p>© 2025 ElitesPro. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- JS Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
-  <script>
-    const gallery = document.getElementById("gallery");
-    const username = "ramizalsafi";
-    const repo = "elitespro.online";
-
-    for (let i = 1; i <= 43; i++) {
-      const imgPath = `https://raw.githubusercontent.com/${username}/${repo}/main/portfolio/images/design${i}.jpeg`;
-      const anchor = document.createElement("a");
-      anchor.href = imgPath;
-      anchor.setAttribute("data-lightbox", "portfolio");
-      anchor.setAttribute("data-title", `Design ${i}`);
-      
-      const img = document.createElement("img");
-      img.src = imgPath;
-      img.alt = `Design ${i}`;
-      img.loading = "lazy";  // <-- Lazy loading enabled here
-      
-      anchor.appendChild(img);
-      gallery.appendChild(anchor);
-    }
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
