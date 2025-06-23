@@ -14,15 +14,18 @@
   <meta property="og:description" content="A showcase of creative projects in branding and design by Ramiz Alsafi." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.elitespro.online/portfolio.html" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/portfolio/images/og-image.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Portfolio | ElitesPro" />
   <meta name="twitter:description" content="Freelance portfolio of Ramiz Alsafi in graphic and brand design." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/portfolio/images/og-image.jpg" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/og-image.jpg" />
 
-  <link rel="icon" href="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/portfolio/images/favicon.png" type="image/png" />
+  <!-- Favicon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/ramizalsafi/elitespro.online/main/portfolio/images/favicon.png" type="image/png" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" />
 </head>
@@ -57,7 +60,7 @@
   <script>
     const gallery = document.getElementById("gallery");
     const username = "ramizalsafi";
-    const repo = "elitespro-website";
+    const repo = "elitespro.online";
     for (let i = 1; i <= 43; i++) {
       const imgPath = `https://raw.githubusercontent.com/${username}/${repo}/main/portfolio/images/design${i}.webp`;
       const anchor = document.createElement("a");
@@ -67,6 +70,7 @@
       const img = document.createElement("img");
       img.src = imgPath;
       img.alt = `Design ${i}`;
+      img.loading = "lazy"; // Lazy loading here
       anchor.appendChild(img);
       gallery.appendChild(anchor);
     }
