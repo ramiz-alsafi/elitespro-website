@@ -797,3 +797,156 @@ section {
         padding-left: 0; /* Reset padding if it was added for centering */
     }
 }
+/* --- Careers Page Specific Styles --- */
+
+.career-intro-section {
+    padding: 80px 0;
+}
+
+.career-flex-container {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.career-text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.career-text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-bg);
+}
+
+.career-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.career-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center image on mobile */
+    align-items: center;
+}
+
+.career-image-content img {
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 100%;
+    height: 350px; /* Consistent height for career banner */
+    object-fit: cover;
+}
+
+.open-positions-section {
+    padding: 80px 0;
+    /* Uses .light-bg for background color */
+    text-align: center;
+}
+
+.open-positions-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+
+.job-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for jobs */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.job-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left; /* Align text within job card */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.job-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.job-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.job-skills {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 25px; /* Space above button */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.job-skills li {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    align-self: flex-start; /* Align button to left within card */
+}
+
+.careers-cta-text {
+    font-size: 1.15rem;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.careers-cta-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.careers-cta-text .btn {
+    margin-top: 25px;
+}
+/* Responsive Adjustments for Careers Page */
+@media (min-width: 768px) {
+    .career-flex-container {
+        flex-direction: row; /* Side-by-side on desktop */
+        align-items: center;
+    }
+
+    .career-text-content {
+        text-align: left;
+    }
+
+    .career-image-content {
+        justify-content: flex-end; /* Align image to the right */
+    }
+
+    /* Adjust specific text alignment for larger screens if needed */
+    .open-positions-section .text-center {
+        text-align: center; /* Keep the CTA text centered */
+    }
+}
