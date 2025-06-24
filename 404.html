@@ -1,59 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 - Page Not Found | ElitesPro</title>
-  <meta name="description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
-  <meta name="keywords" content="404, Page Not Found, ElitesPro" />
-  <meta name="author" content="ElitesPro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - ElitesPro</title>
+    <meta name="description" content="The page you are looking for could not be found on ElitesPro. Please return to the homepage or explore our services." />
+    <meta name="keywords" content="404, Page Not Found, Error, ElitesPro" />
+    <meta name="author" content="ElitesPro" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="404 - Page Not Found | ElitesPro" />
-  <meta property="og:description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elitespro.online/404.html" />
-  <meta property="og:image" content="assets/og-image.jpg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Page Not Found - ElitesPro" />
+    <meta property="og:description" content="The page you are looking for could not be found on ElitesPro. Please return to the homepage or explore our services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/404.html" />
+    <meta property="og:image" content="assets/og-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="404 - Page Not Found | ElitesPro" />
-  <meta name="twitter:description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Page Not Found - ElitesPro" />
+    <meta name="twitter:description" content="The page you are looking for could not be found on ElitesPro. Please return to the homepage or explore our services." />
+    <meta name="twitter:image" content="assets/og-image.jpg" />
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">ElitesPro</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services/index.html" class="nav-link">Services</a></li>
-        <li><a href="careers.html" class="nav-link">Careers</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="error-section" style="text-align:center; padding:5rem 1rem;">
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <p>Oops! The page you are looking for does not exist or has been moved.</p>
-      <a href="index.html" class="btn-primary" style="display:inline-block; margin-top:1.5rem; padding:0.75rem 1.5rem; background:#007BFF; color:#fff; border-radius:5px; text-decoration:none;">Go to Home</a>
-    </section>
-  </main>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="services/inbound.html" class="nav-link dropbtn">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="services/inbound.html">Inbound Support</a>
+                            <a href="services/chat.html">Live Chat</a>
+                            <a href="services/crm.html">CRM Solutions</a>
+                            <a href="services/tech.html">Tech Support</a>
+                            <a href="services/multilingual.html">Multilingual Support</a>
+                            <a href="services/ai.html">AI Solutions</a>
+                            <a href="services/analytics.html">Analytics & Reporting</a>
+                            <a href="services/back-office-support.html">Back-Office Support</a>
+                            <a href="services/helpdesk.html">Helpdesk Management</a>
+                            <a href="services/tools.html">Tools & Integration</a>
+                            <a href="services/training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="services/subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="services/subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+    <main>
+        <section class="page-hero-section">
+            <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+                <h1 style="font-size: 6rem; margin-bottom: 0.2em; color: var(--accent-color);">404</h1>
+                <p class="tagline">Oops! The page you're looking for doesn't exist.</p>
+                <p style="font-size: 1.15rem; margin-bottom: 30px;">It looks like you've wandered off the path. Don't worry, we can help you get back on track.</p>
+                <a href="index.html" class="btn btn-primary cta-button">Go Back to Home</a>
+                <a href="services/inbound.html" class="btn btn-secondary cta-button" style="margin-left: 20px;">Explore Our Services</a>
+            </div>
+        </section>
 
-  <script src="js/scripts.js"></script>
+        <!-- Optional: You can add another section here if you want more content, like FAQs or a sitemap -->
+        <!--
+        <section class="content-section">
+            <div class="container text-center">
+                <h2>What happened?</h2>
+                <p>The page might have been moved, deleted, or you might have mistyped the address.</p>
+                <h3>Here are some helpful links:</h3>
+                <ul style="list-style: none; padding: 0; margin-top: 20px; display: inline-block; text-align: left;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services/inbound.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </section>
+        -->
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Need Assistance?</h2>
+                <p>If you believe this is an error or need help finding something, please don't hesitate to reach out.</p>
+                <a href="contact.html" class="btn btn-primary cta-button">Contact Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/inbound.html">Inbound Support</a></li>
+                        <li><a href="services/chat.html">Live Chat</a></li>
+                        <li><a href="services/ai.html">AI Solutions</a></li>
+                        <li><a href="services/helpdesk.html">Helpdesk</a></li>
+                        <li><a href="services/multilingual.html">Multilingual Support</a></li>
+                        <li><a href="services/crm.html">CRM Setup</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+201002921824">+201002921824</a></p>
+                    <p>Address: [Your Company Address Here]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript for navigation and animations -->
+    <script src="js/scripts.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
