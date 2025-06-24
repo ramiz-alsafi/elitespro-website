@@ -1,83 +1,80 @@
-  <section>
-    <h2>Why Choose AI Assistants?</h2>
-    <div class="values">
-      <div class="value">
-        <h3>Instant Support 24/7</h3>
-        <p>AI assistants can instantly handle common customer queries — anytime, any day — freeing your human agents to focus on complex interactions.</p>
-      </div>
-      <div class="value">
-        <h3>Multilingual & Scalable</h3>
-        <p>Support customers in multiple languages and scale to handle thousands of chats at once — all without additional headcount.</p>
-      </div>
-      <div class="value">
-        <h3>Trained on Your Knowledge Base</h3>
-        <p>Your AI assistant is trained on your FAQs, policies, tone, and past conversations to provide reliable and context-aware replies.</p>
-      </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omnichannel Support | ElitesPro</title>
+  <meta name="description" content="ElitesPro offers seamless omnichannel customer support solutions across voice, email, chat, and social media to ensure a unified customer experience." />
+  <meta name="keywords" content="omnichannel support, customer support, voice support, chat support, social media support, email support, unified customer experience" />
+  <meta name="author" content="ElitesPro" />
 
-  <section>
-    <h2>Integrations We Support</h2>
-    <p>We help you connect AI assistants to your existing platforms:</p>
-    <ul>
-      <li>3CX (voice/chat)</li>
-      <li>LiveChat, Tidio, Crisp</li>
-      <li>Zoho, HubSpot, Freshdesk</li>
-      <li>Custom API & CRM integrations</li>
-    </ul>
-  </section>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Omnichannel Support | ElitesPro" />
+  <meta property="og:description" content="ElitesPro offers seamless omnichannel customer support solutions across voice, email, chat, and social media to ensure a unified customer experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elitespro.online/services/omnichannel.html" />
+  <meta property="og:image" content="../assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Omnichannel Support | ElitesPro" />
+  <meta name="twitter:description" content="ElitesPro offers seamless omnichannel customer support solutions across voice, email, chat, and social media to ensure a unified customer experience." />
+  <meta name="twitter:image" content="../assets/og-image.jpg" />
+
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F2N5W83LPF');
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">ElitesPro</a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="index.html" class="nav-link">Services</a></li>
+        <li><a href="../careers.html" class="nav-link">Careers</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="service-detail" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+      <h1>Omnichannel Support</h1>
+      <p>Deliver exceptional customer service across every touchpoint. At ElitesPro, our Omnichannel Support solutions integrate voice, email, live chat, and social media channels to provide your clients with a seamless and unified experience.</p>
+      
+      <h2>Our Capabilities</h2>
+      <ul>
+        <li>24/7 Voice Support (Inbound/Outbound)</li>
+        <li>Email Ticket Handling</li>
+        <li>Live Chat Integration & Management</li>
+        <li>Social Media Response & Escalation</li>
+        <li>CRM Integration & Unified Dashboards</li>
+      </ul>
+
+      <h2>Why Choose Omnichannel?</h2>
+      <p>Modern customers expect consistent and responsive support across platforms. Our omnichannel solution ensures your support agents can access full customer context no matter where the conversation starts, boosting satisfaction and loyalty.</p>
+
+      <p><a href="../contact.html">Contact us</a> today to implement a robust and scalable support solution tailored to your business.</p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 ElitesPro. All rights reserved.
-    <br />
-    <a class="chat-button" href="https://1309.3cx.cloud/elitepro" target="_blank" rel="noopener noreferrer">Start Live Chat</a>
+    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-    mobileMenuToggle.addEventListener('click', () => {
-      const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
-      mobileMenuToggle.setAttribute('aria-expanded', !expanded);
-      mainNav.classList.toggle('show');
-    });
-
-    // Dropdown toggle for mobile
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const parent = toggle.parentElement;
-          const isOpen = parent.classList.contains('open');
-          if (isOpen) {
-            parent.classList.remove('open');
-            toggle.setAttribute('aria-expanded', false);
-          } else {
-            // Close other open dropdowns
-            document.querySelectorAll('.dropdown.open').forEach(d => {
-              d.classList.remove('open');
-              d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
-            });
-            parent.classList.add('open');
-            toggle.setAttribute('aria-expanded', true);
-          }
-        }
-      });
-    });
-
-    // Close mobile menu and dropdowns when resizing window larger than mobile breakpoint
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        mainNav.classList.remove('show');
-        mobileMenuToggle.setAttribute('aria-expanded', false);
-        document.querySelectorAll('.dropdown.open').forEach(d => {
-          d.classList.remove('open');
-          d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', false);
-        });
-      }
-    });
-  </script>
+  <script src="../js/scripts.js"></script>
 </body>
 </html>
