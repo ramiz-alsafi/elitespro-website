@@ -1,96 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy - ElitesPro</title>
-  <meta name="description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
-  <meta name="keywords" content="Privacy Policy, Data Protection, ElitesPro" />
-  <meta name="author" content="ElitesPro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - ElitesPro</title>
+    <meta name="description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
+    <meta name="keywords" content="Privacy Policy, Data Protection, ElitesPro" />
+    <meta name="author" content="ElitesPro" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Privacy Policy - ElitesPro" />
-  <meta property="og:description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elitespro.online/privacy.html" />
-  <meta property="og:image" content="assets/og-image.jpg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy - ElitesPro" />
+    <meta property="og:description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/privacy.html" />
+    <meta property="og:image" content="assets/og-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy - ElitesPro" />
-  <meta name="twitter:description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy Policy - ElitesPro" />
+    <meta name="twitter:description" content="Read ElitesPro's Privacy Policy to understand how we collect, use, and protect your information." />
+    <meta name="twitter:image" content="assets/og-image.jpg" />
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
-  </script>
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">ElitesPro</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services/index.html" class="nav-link">Services</a></li>
-        <li><a href="careers.html" class="nav-link">Careers</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="privacy-section" style="max-width:900px; margin:3rem auto; padding: 0 1rem;">
-      <h1>Privacy Policy</h1>
-      <p>At ElitesPro, your privacy is very important to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.</p>
-      
-      <h2>Information We Collect</h2>
-      <ul>
-        <li>Personal information you provide when contacting us (e.g., name, email, message content).</li>
-        <li>Usage data collected automatically (e.g., IP addresses, browser type, pages visited) through analytics tools.</li>
-      </ul>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="services/inbound.html" class="nav-link dropbtn">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="services/inbound.html">Inbound Support</a>
+                            <a href="services/chat.html">Live Chat</a>
+                            <a href="services/crm.html">CRM Solutions</a>
+                            <a href="services/tech.html">Tech Support</a>
+                            <a href="services/multilingual.html">Multilingual Support</a>
+                            <a href="services/ai.html">AI Solutions</a>
+                            <a href="services/analytics.html">Analytics & Reporting</a>
+                            <a href="services/back-office-support.html">Back-Office Support</a>
+                            <a href="services/helpdesk.html">Helpdesk Management</a>
+                            <a href="services/tools.html">Tools & Integration</a>
+                            <a href="services/training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="services/subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="services/subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <h2>How We Use Your Information</h2>
-      <ul>
-        <li>To respond to your inquiries and provide customer support.</li>
-        <li>To improve our website and services.</li>
-        <li>To comply with legal obligations.</li>
-      </ul>
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p class="tagline">Understanding how ElitesPro collects, uses, and protects your information.</p>
+            </div>
+        </section>
 
-      <h2>Cookies and Tracking Technologies</h2>
-      <p>We use cookies and similar technologies to enhance your experience and analyze site traffic. You can disable cookies in your browser settings if you prefer.</p>
+        <section class="content-section">
+            <div class="container">
+                <p>At ElitesPro, your privacy is very important to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.</p>
+                
+                <h2>Information We Collect</h2>
+                <ul>
+                    <li>Personal information you provide when contacting us (e.g., name, email, message content).</li>
+                    <li>Usage data collected automatically (e.g., IP addresses, browser type, pages visited) through analytics tools.</li>
+                </ul>
 
-      <h2>Data Security</h2>
-      <p>We implement reasonable measures to protect your data from unauthorized access or disclosure. However, no method of transmission over the internet is 100% secure.</p>
+                <h2>How We Use Your Information</h2>
+                <ul>
+                    <li>To respond to your inquiries and provide customer support.</li>
+                    <li>To improve our website and services.</li>
+                    <li>To comply with legal obligations.</li>
+                </ul>
 
-      <h2>Third-Party Services</h2>
-      <p>We may use third-party services, such as Google Analytics, to help us understand how visitors use our website. These services have their own privacy policies.</p>
+                <h2>Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar technologies to enhance your experience and analyze site traffic. You can disable cookies in your browser settings if you prefer.</p>
 
-      <h2>Your Rights</h2>
-      <p>You have the right to access, correct, or delete your personal data. Contact us at <a href="mailto:privacy@elitespro.online">privacy@elitespro.online</a> for any privacy-related requests.</p>
+                <h2>Data Security</h2>
+                <p>We implement reasonable measures to protect your data from unauthorized access or disclosure. However, no method of transmission over the internet is 100% secure.</p>
 
-      <h2>Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. We encourage you to review it periodically.</p>
+                <h2>Third-Party Services</h2>
+                <p>We may use third-party services, such as Google Analytics, to help us understand how visitors use our website. These services have their own privacy policies.</p>
 
-      <p>Last updated: June 2025</p>
-    </section>
-  </main>
+                <h2>Your Rights</h2>
+                <p>You have the right to access, correct, or delete your personal data. Contact us at <a href="mailto:privacy@elitespro.online">privacy@elitespro.online</a> for any privacy-related requests.</p>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We encourage you to review it periodically.</p>
 
-  <script src="js/scripts.js"></script>
+                <p>Last updated: June 2025</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Have Questions About Our Privacy Policy?</h2>
+                <p>Feel free to reach out to us directly for any concerns or clarifications regarding your data.</p>
+                <a href="contact.html" class="btn btn-primary cta-button">Contact Our Team</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/inbound.html">Inbound Support</a></li>
+                        <li><a href="services/chat.html">Live Chat</a></li>
+                        <li><a href="services/ai.html">AI Solutions</a></li>
+                        <li><a href="services/helpdesk.html">Helpdesk</a></li>
+                        <li><a href="services/multilingual.html">Multilingual Support</a></li>
+                        <li><a href="services/crm.html">CRM Setup</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+201002921824">+201002921824</a></p>
+                    <p>Address: [Your Company Address Here]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript for navigation and animations -->
+    <script src="js/scripts.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
