@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Page Settings -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ElitesPro - Freelance Design, Data & Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElitesPro - Freelance Design, Data & Support Services</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="ElitesPro offers expert freelance services in design, data analysis, translation, and customer support." />
+  <meta name="description" content="ElitesPro offers expert freelance design, data, and customer support services for businesses and creators." />
+  <meta name="keywords" content="freelance design, brand design, data analysis, customer support, CRM, call center, SQL, Python" />
   <meta name="author" content="Ramiz Alsafi" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.elitespro.online/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ElitesPro - Freelance Design, Data & Support" />
-  <meta property="og:description" content="Explore professional freelance services in design, data, and support by Ramiz Alsafi." />
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="ElitesPro - Freelance Design, Data & Support Services" />
+  <meta property="og:description" content="Explore expert design, data, and customer support solutions by Ramiz Alsafi." />
+  <meta property="og:image" content="portfolio/images/og-image.jpg" />
+  <meta property="og:url" content="https://elitespro.online/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.elitespro.online/" />
-  <meta property="og:image" content="https://www.elitespro.online/portfolio/images/og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ElitesPro - Freelance Services in Design, Data & Support" />
-  <meta name="twitter:description" content="Creative freelance work in branding, analysis, and customer support." />
-  <meta name="twitter:image" content="https://www.elitespro.online/portfolio/images/og-image.jpg" />
+  <meta name="twitter:title" content="ElitesPro - Freelance Services" />
+  <meta name="twitter:description" content="Expert freelance design, data, and support services by Ramiz Alsafi." />
+  <meta name="twitter:image" content="portfolio/images/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="portfolio/images/favicon.png" type="image/png" />
+  <link rel="icon" type="image/png" href="portfolio/images/favicon.png" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics (Universal Analytics or GA4) -->
+  <!-- ✅ Important: This tracks visitor data and won’t lose existing data as long as the tracking ID stays the same -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your real Google Analytics ID
   </script>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">ElitesPro</div>
-      <div class="menu-toggle">&#9776;</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- ====== Navbar ====== -->
+  <header class="navbar">
+    <div class="logo">ElitesPro</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <main>
-    <section class="intro fade-in">
+  <!-- ====== Main Section ====== -->
+  <main class="fade-in">
+    <section class="intro">
       <h1>Welcome to ElitesPro</h1>
-      <p>Your one-stop freelance hub for expert design, data, and customer support solutions.</p>
-      <p>I’m Ramiz Alsafi, a multi-skilled freelancer ready to bring your projects to life with creative graphic and brand design, precise data analysis using Python and SQL, and comprehensive customer support services including call center setup and CRM management.</p>
+      <p>
+        Your one-stop freelance hub for expert design, data, and customer support solutions.<br />
+        I'm Ramiz Alsafi, a multi-skilled freelancer ready to bring your projects to life with
+        creative graphic and brand design, precise data analysis using Python and SQL, and
+        comprehensive customer support services including call center setup and CRM management.
+      </p>
       <a href="portfolio.html" class="btn-green">Explore Portfolio</a>
     </section>
   </main>
 
+  <!-- ====== Footer ====== -->
   <footer>
-    <p>© 2025 ElitesPro. All rights reserved.</p>
+    © 2025 ElitesPro. All rights reserved.
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- ====== Mobile Menu Script ====== -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
