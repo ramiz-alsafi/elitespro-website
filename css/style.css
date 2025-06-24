@@ -1,132 +1,139 @@
 /* ===============================
-   Base Reset & Global Styles
+   Base Reset & Global Layout
 ================================= */
 * {
-  margin: 0; /* Remove default margin from all elements */
-  padding: 0; /* Remove default padding from all elements */
-  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes width/height predictable */
+}
+
+html, body {
+  height: 100%; /* Ensure full screen height is used */
 }
 
 body {
-  font-family: 'Poppins', sans-serif; /* Clean, modern font */
-  background-color: #ffffff; /* White page background */
-  color: #001f3f; /* Primary text color (navy) */
-  line-height: 1.6; /* Improves text readability */
-}
-
-/* Links */
-a {
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Inherit color from parent (useful in nav, etc.) */
+  display: flex;
+  flex-direction: column; /* Allows header, main, footer to stack */
+  min-height: 100vh; /* Page fills full viewport height */
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #001f3f;
+  line-height: 1.6;
 }
 
 /* ===============================
-   Navbar Styles
+   Links
+================================= */
+a {
+  text-decoration: none; /* No underlines on links */
+  color: inherit; /* Inherit parent color */
+}
+
+/* ===============================
+   Navbar
 ================================= */
 .navbar {
-  display: flex; /* Horizontal layout */
-  justify-content: space-between; /* Push logo left, menu right */
-  align-items: center; /* Align items vertically center */
-  background-color: #001f3f; /* Navy blue navbar background */
-  padding: 1rem 2rem; /* Space inside navbar */
-  color: white; /* Text color */
-  position: relative; /* For mobile menu dropdown positioning */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f3f;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
 }
 
 .logo {
-  font-size: 1.5rem; /* Logo text size */
-  font-weight: bold; /* Make logo bold */
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-links {
-  list-style: none; /* Remove bullets from nav list */
-  display: flex; /* Horizontal list */
-  gap: 1.5rem; /* Space between links */
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  color: white; /* Link color in navbar */
-  font-weight: 600; /* Semi-bold text */
-  transition: color 0.3s ease; /* Smooth hover effect */
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #2ecc40; /* Green color on hover */
+  color: #2ecc40;
 }
 
 .menu-toggle {
-  display: none; /* Hidden by default (only shown on mobile) */
-  font-size: 2rem; /* Burger icon size */
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
   color: white;
 }
 
 /* ===============================
-   Main Content Section
+   Main Content
 ================================= */
 main {
-  padding: 4rem 2rem; /* Top/bottom and side spacing */
-  width: 100%; /* Limit content width on large screens */
-  margin: 0 auto; /* Center horizontally */
+  flex: 1; /* Fills vertical space between navbar and footer */
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Introduction Section */
 .intro {
-  text-align: center; /* Center text */
-  max-width: 1000px; /* Optional: limit text width */
-  margin: 0 auto; /* Center block horizontally */
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Call-to-action button */
+/* Button */
 .btn-green {
   display: inline-block;
-  background-color: #2ecc40; /* Green background */
+  background-color: #2ecc40;
   color: white;
   padding: 0.75rem 1.5rem;
   margin-top: 1.5rem;
   font-weight: 700;
-  border-radius: 4px; /* Slightly rounded corners */
-  transition: background-color 0.3s ease; /* Smooth hover */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-green:hover {
-  background-color: #27ae37; /* Darker green on hover */
+  background-color: #27ae37;
   cursor: pointer;
 }
 
 /* ===============================
-   Footer Styles
+   Footer
 ================================= */
 footer {
   text-align: center;
-  padding: 2rem 0; /* Space inside footer */
-  background-color: #001f3f; /* Navy background */
+  padding: 2rem 0;
+  background-color: #001f3f;
   color: white;
-  margin-top: 4rem;
 }
 
 /* ===============================
    Fade-in Animation
 ================================= */
 .fade-in {
-  opacity: 0; /* Start transparent */
-  animation: fadeInAnimation 1.5s ease forwards; /* Animate fade-in */
-  animation-delay: 0.5s; /* Delay before starting animation */
+  opacity: 0;
+  animation: fadeInAnimation 1.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 @keyframes fadeInAnimation {
   to {
-    opacity: 1; /* End at fully visible */
+    opacity: 1;
   }
 }
 
 /* ===============================
-   Portfolio Gallery Styles
-   (Used on portfolio.html)
+   Portfolio Gallery (Optional Page)
 ================================= */
 .portfolio-section {
-  max-width: 1200px; /* Limit gallery width */
-  margin: 0 auto 4rem; /* Center and add space below */
+  max-width: 1200px;
+  margin: 0 auto 4rem;
   padding: 2rem 1rem;
   text-align: center;
   color: #001f3f;
@@ -134,22 +141,22 @@ footer {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
-  gap: 1.2rem; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
   margin-top: 1.5rem;
 }
 
 .gallery a {
   display: block;
-  overflow: hidden; /* Prevent image overflow */
+  overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1); /* Subtle shadow */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery a:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
-  box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .gallery img {
@@ -160,15 +167,15 @@ footer {
 }
 
 /* ===============================
-   Responsive Styles for Mobile
+   Responsive for Mobile
 ================================= */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Show menu icon */
+    display: block;
   }
 
   .nav-links {
-    display: none; /* Hide links until menu is toggled */
+    display: none;
     flex-direction: column;
     background-color: #001f3f;
     position: absolute;
@@ -180,6 +187,10 @@ footer {
   }
 
   .nav-links.show {
-    display: flex; /* Show menu when toggled */
+    display: flex;
+  }
+
+  main {
+    padding: 2rem 1rem;
   }
 }
