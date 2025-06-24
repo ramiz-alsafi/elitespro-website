@@ -587,4 +587,61 @@ section {
         display: flex;
     }
 
-    /* Dropdown on mobile -
+    /* Dropdown on mobile - controlled by JS 'active' class */
+    .dropdown .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid var(--light-bg);
+        border-radius: 0;
+        padding: 0;
+        background-color: var(--light-bg); /* Subtle background for mobile dropdown */
+        opacity: 1; /* Always visible when active */
+        transform: translateY(0); /* No transform for mobile dropdown */
+    }
+
+    .dropdown-content a {
+        padding: 10px 40px; /* Deeper indent for sub-items */
+        font-size: 0.95rem;
+    }
+
+    /* Hide dropdown on mobile by default, show when parent li has 'active' */
+    .dropdown:not(.active) .dropdown-content {
+        display: none;
+    }
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content .tagline {
+        font-size: 1.1rem;
+    }
+
+    .hero-content .btn {
+        display: block;
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col ul {
+        padding: 0;
+    }
+
+    .footer-col .social-links {
+        margin-top: 15px;
+    }
+}
