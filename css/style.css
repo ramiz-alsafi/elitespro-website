@@ -59,12 +59,19 @@ a {
 /* Main */
 main {
   padding: 4rem 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .intro {
   text-align: center;
+}
+
+/* Make intro text left-aligned on desktop */
+@media (min-width: 769px) {
+  .intro {
+    text-align: left;
+  }
 }
 
 .btn-green {
@@ -141,7 +148,7 @@ footer {
   height: 160px;
 }
 
-/* Responsive */
+/* Responsive Navigation */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
