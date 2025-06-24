@@ -65,7 +65,7 @@ a {
    Main Content Section
 ================================= */
 main {
-  padding: 4rem 2rem; /* Top/bottom and side spacing */
+  padding: 4rem 4rem; /* Top/bottom and side spacing */
   max-width: 1200px; /* Limit content width on large screens */
   margin: 0 auto; /* Center horizontally */
 }
