@@ -10,16 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile Navigation Toggle (Hamburger Menu)
-    const navToggle = document.querySelector('.nav-toggle'); // Your class
-    const navMenu = document.querySelector('.nav-menu');     // Your class
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            // Close any open dropdown when opening/closing main nav
+            document.querySelectorAll('.dropdown.active').forEach(openDropdown => {
+                if (openDropdown !== navMenu) { // Ensure we don't close the navMenu itself if it's also a dropdown (unlikely)
+                    openDropdown.classList.remove('active');
+                }
+            });
         });
 
-        // Close mobile nav when a menu item is clicked (except dropdown parent)
+        // Close mobile nav when a non-dropdown link is clicked
         navMenu.querySelectorAll('.nav-link:not(.dropbtn)').forEach(link => {
             link.addEventListener('click', () => {
                 if (navMenu.classList.contains('active')) {
@@ -30,42 +36,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dropdown Toggle (for "Services" on desktop, click on mobile)
+    // Dropdown Toggle (for "Services" on mobile, click behavior)
     const dropdownBtn = document.querySelector('.dropbtn');
     if (dropdownBtn) {
-        // Prevent dropdown from acting as a link on click on mobile
         dropdownBtn.addEventListener('click', (e) => {
-            // Check if it's a mobile screen size based on CSS breakpoint (767px)
+            // Only activate this behavior on mobile screen size (<= 767px based on CSS)
             if (window.innerWidth <= 767) {
-                e.preventDefault(); // Prevent default link behavior
-                // Toggle 'active' class on the parent <li> of the dropdown
-                dropdownBtn.parentNode.classList.toggle('active');
+                e.preventDefault(); // Prevent default link behavior for the dropdown parent
+                const parentLi = dropdownBtn.parentNode;
+                parentLi.classList.toggle('active'); // Toggle 'active' on the parent <li>
 
-                // If another dropdown is open, close it
+                // Close other open dropdowns if multiple exist (unlikely for this simple nav)
                 document.querySelectorAll('.dropdown.active').forEach(openDropdown => {
-                    if (openDropdown !== dropdownBtn.parentNode) {
+                    if (openDropdown !== parentLi) {
                         openDropdown.classList.remove('active');
                     }
                 });
             }
-            // For desktop, the CSS :hover will handle it.
         });
     }
 
-    // Close dropdowns if clicking outside (for mobile/tablet only)
+    // Close mobile nav or dropdown if clicking outside
     document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 767 && dropdownBtn) {
-            const isClickInsideDropdown = dropdownBtn.parentNode.contains(e.target) || navToggle.contains(e.target);
-            const isNavMenuOpen = navMenu.classList.contains('active');
-
-            if (!isClickInsideDropdown && isNavMenuOpen) {
-                // If clicked outside and nav menu is open, close nav menu
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            } else if (!isClickInsideDropdown && dropdownBtn.parentNode.classList.contains('active')) {
-                // If clicked outside and only dropdown is open (e.g., on tablet without nav menu active)
-                dropdownBtn.parentNode.classList.remove('active');
+        if (window.innerWidth <= 767) {
+            // Check if click is outside nav menu
+            if (navMenu && navToggle && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
             }
+            // Check if click is outside any dropdown (if dropdowns are separate from main nav close)
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                if (dropdown.classList.contains('active') && !dropdown.contains(e.target) && e.target !== dropdownBtn) {
+                     dropdown.classList.remove('active');
+                }
+            });
         }
     });
 
@@ -73,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll-based animation for sections
     const sections = document.querySelectorAll('section');
     const observerOptions = {
-        root: null, // relative to the viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.1 // 10% of the section must be visible to trigger
+        threshold: 0.1
     };
 
     const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -83,28 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = 1;
                 entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target); // Stop observing once animated
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     sections.forEach(section => {
-        // Apply initial hidden state only if not already in viewport on load
         const rect = section.getBoundingClientRect();
-        if (rect.top > window.innerHeight) { // Check if section is below the current viewport
+        if (rect.top > window.innerHeight) {
             section.style.opacity = 0;
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            section.style.transform = 'translateY(30px)'; /* Slightly more movement */
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out'; /* Longer, smoother transition */
             sectionObserver.observe(section);
         } else {
-            // If already in viewport on load, make it visible immediately
             section.style.opacity = 1;
             section.style.transform = 'translateY(0)';
         }
     });
 
-    // You can add more complex JS features here later, like:
-    // - Dynamic content loading (e.g., fetch service details)
-    // - Simple form validation for contact.html
-    // - Testimonial carousels etc.
 });
