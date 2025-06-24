@@ -15,11 +15,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: slideIn 1s ease forwards;
-}
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 nav a {
   margin-left: 20px;
@@ -43,7 +38,6 @@ nav a:hover {
   font-size: 3rem;
   font-weight: 800;
   color: #0f172a;
-  animation: fadeIn 2s ease;
 }
 .hero p {
   max-width: 600px;
@@ -93,10 +87,28 @@ section h2 {
   color: #475569;
   line-height: 1.6;
 }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #38bdf8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #0ea5e9;
+}
 footer {
   background: #0f172a;
   color: #cbd5e1;
   padding: 30px;
   text-align: center;
   font-size: 0.9rem;
+}
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
 }
