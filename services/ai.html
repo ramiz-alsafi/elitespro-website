@@ -4,84 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Assistant Setup | ElitesPro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f9fb;
-      color: #1e293b;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background: #0f172a;
-      color: #e2e8f0;
-      padding: 20px;
-      text-align: center;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-    .images {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .images img {
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .chat-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #38bdf8;
-      color: white;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
-    .chat-button:hover {
-      background-color: #0ea5e9;
-    }
-  </style>
+  <meta name="description" content="ElitesPro offers smart, scalable AI assistant setup for websites, CRMs, and helpdesks. Automate customer support and boost productivity." />
+  <meta name="keywords" content="AI assistant setup, chatbot integration, customer service automation, ElitesPro AI, CRM AI assistant" />
+  <meta name="author" content="ElitesPro" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Assistant Setup | ElitesPro" />
+  <meta property="og:description" content="ElitesPro offers smart, scalable AI assistant setup for websites, CRMs, and helpdesks. Automate customer support and boost productivity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elitespro.online/services/ai.html" />
+  <meta property="og:image" content="../assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Assistant Setup | ElitesPro" />
+  <meta name="twitter:description" content="ElitesPro offers smart, scalable AI assistant setup for websites, CRMs, and helpdesks. Automate customer support and boost productivity." />
+  <meta name="twitter:image" content="../assets/og-image.jpg" />
+
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F2N5W83LPF');
+  </script>
 </head>
 <body>
   <header>
-    <h1>AI Assistant Setup</h1>
-    <p><a href="../index.html">← Back to Home</a></p>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">ElitesPro</a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="index.html" class="nav-link">Services</a></li>
+        <li><a href="../careers.html" class="nav-link">Careers</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <div class="container">
-    <p>Want to integrate AI assistants into your support flow? ElitesPro sets up smart, responsive, and customizable AI chatbots for websites, helpdesks, and social platforms. From basic query handling to advanced integrations with CRMs and databases — we build scalable automation systems with personality.</p>
-    <p>Boost first-response times, reduce agent workload, and offer 24/7 self-service support with AI that feels human, helpful, and on-brand.</p>
-    <div class="images">
-      <img src="../assets/ai-support-agent.jpg" alt="AI chatbot conversation interface" />
-      <img src="../assets/chatbot-handshake.jpg" alt="AI collaborating with human agents" />
-    </div>
-    <a href="https://www.elitespro.online" class="chat-button">Start with AI Setup</a>
-  </div>
+
+  <main class="service-detail">
+    <section class="section container" style="padding: 3rem 1rem;">
+      <h1>AI Assistant Setup</h1>
+      <p>Want to integrate AI assistants into your support flow? ElitesPro sets up smart, responsive, and customizable AI chatbots for websites, helpdesks, and social platforms. From basic query handling to advanced integrations with CRMs and databases — we build scalable automation systems with personality.</p>
+      <p>Boost first-response times, reduce agent workload, and offer 24/7 self-service support with AI that feels human, helpful, and on-brand.</p>
+      <div class="images" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 2rem 0;">
+        <img src="../assets/ai-support-agent.jpg" alt="AI chatbot conversation interface" style="max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);" />
+        <img src="../assets/chatbot-handshake.jpg" alt="AI collaborating with human agents" style="max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);" />
+      </div>
+      <a href="https://www.elitespro.online" class="btn">Start with AI Setup</a>
+    </section>
+  </main>
 
   <footer>
     <p>📞 <a href="https://3cx.elitespro.online" target="_blank">Call Us</a> | 💬 <a href="https://3cx.elitespro.online" target="_blank">Live Chat</a></p>
     <p>&copy; 2025 ElitesPro. All rights reserved.</p>
   </footer>
+
+  <script src="../js/scripts.js"></script>
 </body>
 </html>
