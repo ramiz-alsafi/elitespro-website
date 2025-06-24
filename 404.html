@@ -4,64 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>404 - Page Not Found | ElitesPro</title>
-  <meta name="description" content="Oops! The page you're looking for doesn't exist. Return to ElitesPro homepage.">
-  <meta name="robots" content="noindex, follow">
-  <meta name="author" content="Ramiz Alsafi">
-  <link rel="canonical" href="https://www.elitespro.online/404.html" />
+  <meta name="description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
+  <meta name="keywords" content="404, Page Not Found, ElitesPro" />
+  <meta name="author" content="ElitesPro" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="404 - Page Not Found | ElitesPro">
-  <meta property="og:description" content="This page does not exist. Visit ElitesPro for freelance design, data, and support services.">
+  <meta property="og:title" content="404 - Page Not Found | ElitesPro" />
+  <meta property="og:description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.elitespro.online/404.html" />
-  <meta property="og:image" content="portfolio/images/og-image.jpg" />
+  <meta property="og:url" content="https://elitespro.online/404.html" />
+  <meta property="og:image" content="assets/og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="404 - Page Not Found | ElitesPro" />
-  <meta name="twitter:description" content="Return to ElitesPro homepage to explore services and portfolio." />
-  <meta name="twitter:image" content="portfolio/images/og-image.jpg" />
+  <meta name="twitter:description" content="Sorry, the page you are looking for cannot be found on ElitesPro." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
 
-  <link rel="icon" href="portfolio/images/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
-  </script>
 </head>
-
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">ElitesPro</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <a href="index.html" class="logo">ElitesPro</a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services/index.html" class="nav-link">Services</a></li>
+        <li><a href="careers.html" class="nav-link">Careers</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="fade-in">
-    <section class="intro">
-      <h1>404 - Page Not Found</h1>
-      <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
-      <a href="index.html" class="btn-green">Back to Home</a>
+  <main>
+    <section class="error-section" style="text-align:center; padding:5rem 1rem;">
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+      <p>Oops! The page you are looking for does not exist or has been moved.</p>
+      <a href="index.html" class="btn-primary" style="display:inline-block; margin-top:1.5rem; padding:0.75rem 1.5rem; background:#007BFF; color:#fff; border-radius:5px; text-decoration:none;">Go to Home</a>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 ElitesPro. All rights reserved.</p>
+    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
