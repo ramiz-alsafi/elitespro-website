@@ -1,83 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services | ElitesPro</title>
-  <meta name="description" content="Explore the wide range of freelance services offered by ElitesPro, including graphic design, translation, customer support, data entry, and more." />
-  <meta name="keywords" content="freelance services, graphic design, translation, customer support, data entry, email marketing, sales, CRM" />
-  <meta name="author" content="ElitesPro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - ElitesPro</title>
+    <meta name="description" content="Explore ElitesPro's comprehensive range of freelance and customer support services, including inbound, live chat, CRM, tech support, and more." />
+    <meta name="keywords" content="ElitesPro Services, Customer Support, Freelance Solutions, Inbound, Live Chat, CRM, Tech Support, Multilingual, AI, Analytics, Back-Office, Helpdesk, Graphic Design, Translation" />
+    <meta name="author" content="ElitesPro" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Our Services | ElitesPro" />
-  <meta property="og:description" content="Explore the wide range of freelance services offered by ElitesPro, including graphic design, translation, customer support, data entry, and more." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elitespro.online/services/index.html" />
-  <meta property="og:image" content="../assets/og-image.jpg" />
+    <meta property="og:title" content="Our Services - ElitesPro" />
+    <meta property="og:description" content="Explore ElitesPro's comprehensive range of freelance and customer support services, including inbound, live chat, CRM, tech support, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/services/index.html" />
+    <meta property="og:image" content="../assets/og-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Our Services | ElitesPro" />
-  <meta name="twitter:description" content="Explore the wide range of freelance services offered by ElitesPro, including graphic design, translation, customer support, data entry, and more." />
-  <meta name="twitter:image" content="../assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Services - ElitesPro" />
+    <meta name="twitter:description" content="Explore ElitesPro's comprehensive range of freelance and customer support services, including inbound, live chat, CRM, tech support, and more." />
+    <meta name="twitter:image" content="../assets/og-image.jpg" />
 
-  <link rel="icon" href="../assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
-  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="../index.html" class="logo">ElitesPro</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="../about.html" class="nav-link">About</a></li>
-        <li><a href="index.html" class="nav-link active">Services</a></li>
-        <li><a href="../careers.html" class="nav-link">Careers</a></li>
-        <li><a href="../contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="services-intro" style="padding: 3rem 1rem; max-width: 900px; margin: 0 auto;">
-      <h1>Our Services</h1>
-      <p>At ElitesPro, we offer a wide range of freelance services designed to help your business grow and succeed. Explore our specialized offerings below and find the perfect solution for your needs.</p>
-    </section>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="nav-link dropbtn active">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="inbound.html">Inbound Support</a>
+                            <a href="chat.html">Live Chat</a>
+                            <a href="crm.html">CRM Solutions</a>
+                            <a href="tech.html">Tech Support</a>
+                            <a href="multilingual.html">Multilingual Support</a>
+                            <a href="ai.html">AI Solutions</a>
+                            <a href="analytics.html">Analytics & Reporting</a>
+                            <a href="back-office-support.html">Back-Office Support</a>
+                            <a href="helpdesk.html">Helpdesk Management</a>
+                            <a href="tools.html">Tools & Integration</a>
+                            <a href="training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="../careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section class="services-list" style="max-width: 900px; margin: 0 auto; padding: 1rem;">
-      <ul>
-        <li><a href="graphic-design.html">Graphic Design</a></li>
-        <li><a href="logo-design.html">Logo Design</a></li>
-        <li><a href="brand-design.html">Brand Design</a></li>
-        <li><a href="translation.html">Translation</a></li>
-        <li><a href="transcription.html">Transcription</a></li>
-        <li><a href="customer-support.html">Customer Support</a></li>
-        <li><a href="data-entry.html">Data Entry</a></li>
-        <li><a href="microsoft-office.html">Microsoft Office Proficiency</a></li>
-        <li><a href="email-marketing.html">Email Marketing</a></li>
-        <li><a href="cold-calling.html">Cold Calling</a></li>
-        <li><a href="sales.html">Sales</a></li>
-        <li><a href="crm-setup.html">CRM Setup and Support</a></li>
-      </ul>
-    </section>
-  </main>
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Our Comprehensive Services</h1>
+                <p class="tagline">Providing expert freelance and customer support solutions to empower your business.</p>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+        <section class="services-grid-overview light-bg">
+            <div class="container">
+                <h2>Solutions Tailored for Your Success</h2>
+                <p class="section-description">At ElitesPro, we offer a diverse array of services designed to meet the unique needs of businesses seeking efficient, high-quality support and creative solutions.</p>
+                
+                <div class="service-cards-grid">
+                    <div class="service-card">
+                        <h3>Inbound Support</h3>
+                        <p>Handle all incoming customer inquiries via phone, email, and chat with professionalism and efficiency.</p>
+                        <a href="inbound.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Live Chat</h3>
+                        <p>Engage with website visitors in real-time, providing immediate assistance and improving conversion rates.</p>
+                        <a href="chat.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>CRM Solutions</h3>
+                        <p>Streamline your customer relationship management with expert setup, customization, and ongoing support.</p>
+                        <a href="crm.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Tech Support</h3>
+                        <p>Offer reliable technical assistance to your customers, resolving issues quickly and effectively.</p>
+                        <a href="tech.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Multilingual Support</h3>
+                        <p>Expand your global reach with customer support available in multiple languages.</p>
+                        <a href="multilingual.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>AI Solutions</h3>
+                        <p>Implement cutting-edge AI tools to automate responses, analyze data, and enhance customer interactions.</p>
+                        <a href="ai.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Analytics & Reporting</h3>
+                        <p>Gain valuable insights into your customer data and service performance with detailed reports.</p>
+                        <a href="analytics.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Back-Office Support</h3>
+                        <p>Ensure smooth operations with efficient data entry, administrative tasks, and operational support.</p>
+                        <a href="back-office-support.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Helpdesk Management</h3>
+                        <p>Optimize your helpdesk operations for faster ticket resolution and improved agent efficiency.</p>
+                        <a href="helpdesk.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Tools & Integration</h3>
+                        <p>Integrate essential tools and platforms to create a cohesive and powerful support ecosystem.</p>
+                        <a href="tools.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Training & QA</h3>
+                        <p>Develop your team's skills and maintain high service standards through comprehensive training and quality assurance.</p>
+                        <a href="training.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Graphic Design</h3>
+                        <p>Transform your brand with professional graphic design services, from logos to marketing materials.</p>
+                        <a href="graphic-design.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Translation</h3>
+                        <p>Break language barriers with accurate and culturally nuanced translation services for various content types.</p>
+                        <a href="translation.html" class="btn btn-secondary btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="../js/scripts.js"></script>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Elevate Your Business?</h2>
+                <p>Let's discuss how ElitesPro's expert services can drive your success. Contact us today for a tailored solution.</p>
+                <a href="../contact.html" class="btn btn-primary cta-button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="../assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="../assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="inbound.html">Inbound Support</a></li>
+                        <li><a href="chat.html">Live Chat</a></li>
+                        <li><a href="ai.html">AI Solutions</a></li>
+                        <li><a href="helpdesk.html">Helpdesk</a></li>
+                        <li><a href="multilingual.html">Multilingual Support</a></li>
+                        <li><a href="crm.html">CRM Setup</a></li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li><a href="translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+201002921824">+201002921824</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
