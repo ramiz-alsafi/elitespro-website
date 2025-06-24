@@ -1,76 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Careers - ElitesPro</title>
-  <meta name="description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
-  <meta name="keywords" content="Careers, Jobs, Freelance, Opportunities, ElitesPro" />
-  <meta name="author" content="ElitesPro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers - ElitesPro</title>
+    <meta name="description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
+    <meta name="keywords" content="Careers, Jobs, Freelance, Opportunities, ElitesPro" />
+    <meta name="author" content="ElitesPro" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Careers - ElitesPro" />
-  <meta property="og:description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elitespro.online/careers.html" />
-  <meta property="og:image" content="assets/og-image.jpg" />
+    <meta property="og:title" content="Careers - ElitesPro" />
+    <meta property="og:description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/careers.html" />
+    <meta property="og:image" content="assets/og-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Careers - ElitesPro" />
-  <meta name="twitter:description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Careers - ElitesPro" />
+    <meta name="twitter:description" content="Explore career opportunities at ElitesPro. Join our team of talented freelancers and help us deliver outstanding freelance services." />
+    <meta name="twitter:image" content="assets/og-image.jpg" />
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
-  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">ElitesPro</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services/index.html" class="nav-link">Services</a></li>
-        <li><a href="careers.html" class="nav-link active">Careers</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="careers-section" style="max-width:900px; margin:3rem auto; padding:0 1rem;">
-      <h1>Careers at ElitesPro</h1>
-      <p>We’re always looking for talented freelancers to join our network. If you have skills in graphic design, translation, customer support, data entry, or any of our offered services, we want to hear from you!</p>
-      
-      <h2>Open Positions</h2>
-      <ul>
-        <li><strong>Graphic Designer</strong> – Create compelling visuals and branding assets.</li>
-        <li><strong>Translator</strong> – Provide accurate and fluent translation services.</li>
-        <li><strong>Customer Support Specialist</strong> – Assist clients with inquiries and support.</li>
-        <li><strong>Data Entry Operator</strong> – Ensure accurate data handling and entry.</li>
-      </ul>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="services/inbound.html" class="nav-link dropbtn">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="services/inbound.html">Inbound Support</a>
+                            <a href="services/chat.html">Live Chat</a>
+                            <a href="services/crm.html">CRM Solutions</a>
+                            <a href="services/tech.html">Tech Support</a>
+                            <a href="services/multilingual.html">Multilingual Support</a>
+                            <a href="services/ai.html">AI Solutions</a>
+                            <a href="services/analytics.html">Analytics & Reporting</a>
+                            <a href="services/back-office-support.html">Back-Office Support</a>
+                            <a href="services/helpdesk.html">Helpdesk Management</a>
+                            <a href="services/tools.html">Tools & Integration</a>
+                            <a href="services/training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="services/subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="services/subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-link active">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <p>If you’re interested in joining us, please send your CV and portfolio to <a href="mailto:careers@elitespro.online">careers@elitespro.online</a> or use our <a href="contact.html">contact form</a>.</p>
-    </section>
-  </main>
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Careers at ElitesPro</h1>
+                <p class="tagline">Join our dynamic team and grow your career with us.</p>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+        <section class="career-intro-section">
+            <div class="container">
+                <div class="career-flex-container">
+                    <div class="career-text-content">
+                        <h2>Why Work With Us?</h2>
+                        <p>At ElitesPro, we’re always looking for talented freelancers to join our network. If you have skills in graphic design, translation, customer support, data entry, or any of our offered services, we want to hear from you!</p>
+                        <p>We believe in fostering a collaborative and supportive environment where talent can thrive. We offer flexible opportunities and a chance to work on diverse projects with clients from around the globe.</p>
+                        <a href="#open-positions" class="btn btn-primary">View Open Positions</a>
+                    </div>
+                    <div class="career-image-content">
+                        <img src="assets/career-banner.jpg" alt="Team collaborating on a project" loading="lazy">
+                        </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/scripts.js"></script>
+        <section id="open-positions" class="open-positions-section light-bg">
+            <div class="container">
+                <h2>Current Open Positions</h2>
+                <div class="job-listing-grid">
+                    <div class="job-card">
+                        <h3>Graphic Designer</h3>
+                        <p>Create compelling visuals and branding assets for a diverse range of clients. Strong portfolio and proficiency in design software required.</p>
+                        <ul class="job-skills">
+                            <li>Adobe Creative Suite</li>
+                            <li>Branding</li>
+                            <li>Illustration</li>
+                        </ul>
+                        <a href="mailto:careers@elitespro.online?subject=Application:%20Graphic%20Designer" class="btn btn-secondary btn-small">Apply Now</a>
+                    </div>
+                    <div class="job-card">
+                        <h3>Translator</h3>
+                        <p>Provide accurate and fluent translation services across various languages. Native-level proficiency in at least two languages is essential.</p>
+                        <ul class="job-skills">
+                            <li>Fluency in multiple languages</li>
+                            <li>Cultural Nuance</li>
+                            <li>Localization</li>
+                        </ul>
+                        <a href="mailto:careers@elitespro.online?subject=Application:%20Translator" class="btn btn-secondary btn-small">Apply Now</a>
+                    </div>
+                    <div class="job-card">
+                        <h3>Customer Support Specialist</h3>
+                        <p>Assist clients with inquiries and support, ensuring high levels of customer satisfaction through various channels.</p>
+                        <ul class="job-skills">
+                            <li>Communication</li>
+                            <li>Problem-Solving</li>
+                            <li>CRM Software</li>
+                        </ul>
+                        <a href="mailto:careers@elitespro.online?subject=Application:%20Customer%20Support%20Specialist" class="btn btn-secondary btn-small">Apply Now</a>
+                    </div>
+                    <div class="job-card">
+                        <h3>Data Entry Operator</h3>
+                        <p>Ensure accurate and efficient data handling and entry for various projects. Attention to detail and speed are key.</p>
+                        <ul class="job-skills">
+                            <li>Accuracy</li>
+                            <li>Typing Speed</li>
+                            <li>Microsoft Office</li>
+                        </ul>
+                        <a href="mailto:careers@elitespro.online?subject=Application:%20Data%20Entry%20Operator" class="btn btn-secondary btn-small">Apply Now</a>
+                    </div>
+                    </div>
+
+                <div class="careers-cta-text text-center">
+                    <p>Can't find a suitable position but still interested in joining our network?</p>
+                    <p>Send your CV and portfolio directly to <a href="mailto:careers@elitespro.online">careers@elitespro.online</a> or use our <a href="contact.html">contact form</a>.</p>
+                    <a href="contact.html" class="btn btn-tertiary">Send General Application</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Start Your Freelance Journey?</h2>
+                <p>Join ElitesPro and be part of a growing network that values skill, dedication, and innovation.</p>
+                <a href="contact.html" class="btn btn-primary cta-button">Contact Us to Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/inbound.html">Inbound Support</a></li>
+                        <li><a href="services/chat.html">Live Chat</a></li>
+                        <li><a href="services/ai.html">AI Solutions</a></li>
+                        <li><a href="services/helpdesk.html">Helpdesk</a></li>
+                        <li><a href="services/multilingual.html">Multilingual Support</a></li>
+                        <li><a href="services/crm.html">CRM Setup</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@elitespro.online">info@elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p>Address: [Your Company Address Here]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
