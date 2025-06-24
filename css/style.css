@@ -1,121 +1,132 @@
-/* Reset & Base Styles */
+/* ===============================
+   Base Reset & Global Styles
+================================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margin from all elements */
+  padding: 0; /* Remove default padding from all elements */
+  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #001f3f;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  background-color: #ffffff; /* White page background */
+  color: #001f3f; /* Primary text color (navy) */
+  line-height: 1.6; /* Improves text readability */
 }
 
+/* Links */
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherit color from parent (useful in nav, etc.) */
 }
 
-/* Navbar */
+/* ===============================
+   Navbar Styles
+================================= */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #001f3f;
-  padding: 2rem 2rem;
-  color: white;
-  position: relative;
+  display: flex; /* Horizontal layout */
+  justify-content: space-between; /* Push logo left, menu right */
+  align-items: center; /* Align items vertically center */
+  background-color: #001f3f; /* Navy blue navbar background */
+  padding: 1rem 2rem; /* Space inside navbar */
+  color: white; /* Text color */
+  position: relative; /* For mobile menu dropdown positioning */
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem; /* Logo text size */
+  font-weight: bold; /* Make logo bold */
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* Remove bullets from nav list */
+  display: flex; /* Horizontal list */
+  gap: 1.5rem; /* Space between links */
 }
 
 .nav-links a {
-  color: white;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  color: white; /* Link color in navbar */
+  font-weight: 600; /* Semi-bold text */
+  transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a:hover {
-  color: #2ecc40;
+  color: #2ecc40; /* Green color on hover */
 }
 
 .menu-toggle {
-  display: none;
-  font-size: 2rem;
+  display: none; /* Hidden by default (only shown on mobile) */
+  font-size: 2rem; /* Burger icon size */
   cursor: pointer;
   color: white;
 }
 
-/* Main */
+/* ===============================
+   Main Content Section
+================================= */
 main {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 4rem 2rem; /* Top/bottom and side spacing */
+  max-width: 1200px; /* Limit content width on large screens */
+  margin: 0 auto; /* Center horizontally */
 }
 
+/* Introduction Section */
 .intro {
-  text-align: center;
+  text-align: center; /* Center text */
+  max-width: 1000px; /* Optional: limit text width */
+  margin: 0 auto; /* Center block horizontally */
 }
 
-/* Make intro text left-aligned on desktop */
-@media (min-width: 769px) {
-  .intro {
-    text-align: left;
-  }
-}
-
+/* Call-to-action button */
 .btn-green {
   display: inline-block;
-  background-color: #2ecc40;
+  background-color: #2ecc40; /* Green background */
   color: white;
   padding: 0.75rem 1.5rem;
   margin-top: 1.5rem;
   font-weight: 700;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover */
 }
 
 .btn-green:hover {
-  background-color: #27ae37;
+  background-color: #27ae37; /* Darker green on hover */
   cursor: pointer;
 }
 
-/* Footer */
+/* ===============================
+   Footer Styles
+================================= */
 footer {
   text-align: center;
-  padding: 2rem 0;
-  background-color: #001f3f;
+  padding: 2rem 0; /* Space inside footer */
+  background-color: #001f3f; /* Navy background */
   color: white;
   margin-top: 4rem;
 }
 
-/* Fade-In */
+/* ===============================
+   Fade-in Animation
+================================= */
 .fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 1.5s ease forwards;
-  animation-delay: 0.5s;
+  opacity: 0; /* Start transparent */
+  animation: fadeInAnimation 1.5s ease forwards; /* Animate fade-in */
+  animation-delay: 0.5s; /* Delay before starting animation */
 }
 
 @keyframes fadeInAnimation {
   to {
-    opacity: 1;
+    opacity: 1; /* End at fully visible */
   }
 }
 
-/* Portfolio Gallery */
+/* ===============================
+   Portfolio Gallery Styles
+   (Used on portfolio.html)
+================================= */
 .portfolio-section {
-  max-width: 960px;
-  margin: 0 auto 4rem;
+  max-width: 1200px; /* Limit gallery width */
+  margin: 0 auto 4rem; /* Center and add space below */
   padding: 2rem 1rem;
   text-align: center;
   color: #001f3f;
@@ -123,21 +134,21 @@ footer {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 1.2rem; /* Space between items */
   margin-top: 1.5rem;
 }
 
 .gallery a {
   display: block;
-  overflow: hidden;
+  overflow: hidden; /* Prevent image overflow */
   border-radius: 8px;
-  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery a:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Zoom effect on hover */
   box-shadow: 0 8px 15px rgb(0 0 0 / 0.2);
 }
 
@@ -148,14 +159,16 @@ footer {
   height: 160px;
 }
 
-/* Responsive Navigation */
+/* ===============================
+   Responsive Styles for Mobile
+================================= */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block; /* Show menu icon */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* Hide links until menu is toggled */
     flex-direction: column;
     background-color: #001f3f;
     position: absolute;
@@ -167,6 +180,6 @@ footer {
   }
 
   .nav-links.show {
-    display: flex;
+    display: flex; /* Show menu when toggled */
   }
 }
