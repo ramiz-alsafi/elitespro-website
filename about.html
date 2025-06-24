@@ -1,80 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - ElitesPro</title>
-  <meta name="description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
-  <meta name="keywords" content="About, ElitesPro, Freelance Services, Mission, Values" />
-  <meta name="author" content="ElitesPro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - ElitesPro</title>
+    <meta name="description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
+    <meta name="keywords" content="About, ElitesPro, Freelance Services, Mission, Values" />
+    <meta name="author" content="ElitesPro" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="About Us - ElitesPro" />
-  <meta property="og:description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elitespro.online/about.html" />
-  <meta property="og:image" content="assets/og-image.jpg" />
+    <meta property="og:title" content="About Us - ElitesPro" />
+    <meta property="og:description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/about.html" />
+    <meta property="og:image" content="assets/og-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Us - ElitesPro" />
-  <meta name="twitter:description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us - ElitesPro" />
+    <meta name="twitter:description" content="Learn more about ElitesPro, our mission, values, and the freelance services we provide to help you succeed." />
+    <meta name="twitter:image" content="assets/og-image.jpg" />
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2N5W83LPF');
-  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">ElitesPro</a>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li><a href="services/index.html" class="nav-link">Services</a></li>
-        <li><a href="careers.html" class="nav-link">Careers</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="about-section" style="max-width:900px; margin:3rem auto; padding: 0 1rem;">
-      <h1>About ElitesPro</h1>
-      <p>At ElitesPro, we are passionate about empowering businesses and individuals with top-quality freelance services. Our team specializes in graphic design, brand development, translation, transcription, customer support, data entry, and more.</p>
-      
-      <p>We believe in delivering excellence, building lasting partnerships, and helping our clients succeed in their ventures through tailored solutions and professional expertise.</p>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="dropdown">
+                        <a href="services/inbound.html" class="nav-link dropbtn">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="services/inbound.html">Inbound Support</a>
+                            <a href="services/chat.html">Live Chat</a>
+                            <a href="services/crm.html">CRM Solutions</a>
+                            <a href="services/tech.html">Tech Support</a>
+                            <a href="services/multilingual.html">Multilingual Support</a>
+                            <a href="services/ai.html">AI Solutions</a>
+                            <a href="services/analytics.html">Analytics & Reporting</a>
+                            <a href="services/back-office-support.html">Back-Office Support</a>
+                            <a href="services/helpdesk.html">Helpdesk Management</a>
+                            <a href="services/tools.html">Tools & Integration</a>
+                            <a href="services/training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="services/subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="services/subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <h2>Our Mission</h2>
-      <p>To provide reliable, creative, and affordable freelance services that enable our clients to thrive in an ever-evolving marketplace.</p>
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>About ElitesPro</h1>
+                <p class="tagline">Empowering businesses with top-quality freelance services and dedicated support.</p>
+            </div>
+        </section>
 
-      <h2>Our Values</h2>
-      <ul>
-        <li><strong>Quality:</strong> Delivering high-standard results every time.</li>
-        <li><strong>Integrity:</strong> Being transparent and honest in all our dealings.</li>
-        <li><strong>Customer Focus:</strong> Prioritizing client needs and satisfaction.</li>
-        <li><strong>Innovation:</strong> Embracing creativity and new ideas.</li>
-        <li><strong>Collaboration:</strong> Working together for mutual success.</li>
-      </ul>
-    </section>
-  </main>
+        <section class="about-content-section">
+            <div class="container">
+                <div class="about-flex-container">
+                    <div class="about-text-content">
+                        <h2>Our Story & Expertise</h2>
+                        <p>At ElitesPro, we are passionate about empowering businesses and individuals with top-quality freelance services. Our team specializes in graphic design, brand development, translation, transcription, customer support, data entry, and more. We've built our foundation on a commitment to excellence and a deep understanding of what it takes for businesses to thrive in today's dynamic market.</p>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+                        <p>We believe in delivering excellence, building lasting partnerships, and helping our clients succeed in their ventures through tailored solutions and professional expertise. Our journey began with a simple goal: to connect skilled professionals with businesses in need of flexible, high-quality support, creating a win-win for everyone involved.</p>
+                        <a href="services/inbound.html" class="btn btn-primary">Discover Our Services</a>
+                    </div>
+                    <div class="about-image-content">
+                        <img src="assets/about-us-team.jpg" alt="ElitesPro Team Collaboration" loading="lazy">
+                        </div>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/scripts.js"></script>
+        <section class="mission-values-section light-bg">
+            <div class="container">
+                <div class="mv-grid">
+                    <div class="mv-col">
+                        <h2>Our Mission</h2>
+                        <p>To provide reliable, creative, and affordable freelance services that enable our clients to thrive in an ever-evolving marketplace, fostering growth and sustained success.</p>
+                    </div>
+                    <div class="mv-col">
+                        <h2>Our Values</h2>
+                        <ul>
+                            <li><strong>Quality:</strong> Delivering high-standard results every time.</li>
+                            <li><strong>Integrity:</strong> Being transparent and honest in all our dealings.</li>
+                            <li><strong>Customer Focus:</strong> Prioritizing client needs and satisfaction.</li>
+                            <li><strong>Innovation:</strong> Embracing creativity and new ideas.</li>
+                            <li><strong>Collaboration:</strong> Working together for mutual success.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Partner with ElitesPro for scalable and effective freelance solutions that drive real results. Let's start a conversation about your needs.</p>
+                <a href="contact.html" class="btn btn-primary cta-button">Get a Free Quote Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/inbound.html">Inbound Support</a></li>
+                        <li><a href="services/chat.html">Live Chat</a></li>
+                        <li><a href="services/ai.html">AI Solutions</a></li>
+                        <li><a href="services/helpdesk.html">Helpdesk</a></li>
+                        <li><a href="services/multilingual.html">Multilingual Support</a></li>
+                        <li><a href="services/crm.html">CRM Setup</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@elitespro.online">info@elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p>Address: [Your Company Address Here]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
