@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions - ElitesPro</title>
+    <meta name="description" content="Find answers to common questions about ElitesPro's freelance services, including graphic design, translation, CRM, and customer support." />
+    <meta name="keywords" content="FAQ, ElitesPro, freelance services, graphic design FAQ, translation FAQ, CRM setup FAQ, customer support FAQ, common questions" />
+    <meta name="author" content="ElitesPro" />
+
+    <meta property="og:title" content="Frequently Asked Questions - ElitesPro" />
+    <meta property="og:description" content="Find answers to common questions about ElitesPro's freelance services, including graphic design, translation, CRM, and customer support." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/faq.html" />
+    <meta property="og:image" content="assets/og-image.jpg" /> <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Frequently Asked Questions - ElitesPro" />
+    <meta name="twitter:description" content="Find answers to common questions about ElitesPro's freelance services, including graphic design, translation, CRM, and customer support." />
+    <meta name="twitter:image" content="assets/og-image.jpg" /> <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
+    <style>
+        /* Basic styles for FAQ accordion - you can integrate these into your style.css */
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures border-radius applies to content */
+        }
+        .faq-question {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+        .faq-question .icon {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active .icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: #fff;
+            color: #555;
+        }
+        .faq-answer p {
+            padding: 15px 0;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .faq-answer.open {
+            max-height: 500px; /* Adjust as needed to fit content, a large value works */
+            padding-bottom: 15px; /* Add bottom padding when open */
+        }
+
+        /* Responsive adjustments for the FAQ section */
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 1em;
+                padding: 12px 15px;
+            }
+            .faq-answer p {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="services/inbound.html" class="nav-link dropbtn">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="services/inbound.html">Inbound Support</a>
+                            <a href="services/chat.html">Live Chat</a>
+                            <a href="services/crm.html">CRM Solutions</a>
+                            <a href="services/tech.html">Tech Support</a>
+                            <a href="services/multilingual.html">Multilingual Support</a>
+                            <a href="services/ai.html">AI Solutions</a>
+                            <a href="services/analytics.html">Analytics & Reporting</a>
+                            <a href="services/back-office-support.html">Back-Office Support</a>
+                            <a href="services/helpdesk.html">Helpdesk Management</a>
+                            <a href="services/tools.html">Tools & Integration</a>
+                            <a href="services/training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="services/subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="services/subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Frequently Asked Questions</h1>
+                <p class="tagline">Answers to the most common questions about our services.</p>
+            </div>
+        </section>
+
+        <section class="faq-section content-section">
+            <div class="container">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What types of freelance services does ElitesPro offer?
+                            <span class="icon">&#9660;</span> </div>
+                        <div class="faq-answer">
+                            <p>ElitesPro specializes in a wide range of premium freelance services, including graphic design, translation, data entry, virtual assistance, email marketing, customer support, and comprehensive CRM setup and management. We aim to provide scalable solutions for various business needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I request a service or get a quote?
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can easily request a service or get a free quote by visiting our <a href="contact.html">Contact Us</a> page and filling out the inquiry form. Alternatively, you can email us directly at <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a> or call us at <a href="tel:+201002921824">+201002921824</a>. Our team will get back to you promptly to discuss your specific requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is your process for project management?
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For each project, we assign a dedicated project manager who serves as your primary point of contact. They ensure clear communication, timely updates, and adherence to deadlines and specifications. We use collaborative tools to keep you informed every step of the way, from initial brief to final delivery.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do you ensure the quality of your freelance work?
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Quality is at the core of ElitesPro. We employ a rigorous vetting process for all our freelancers, ensuring they possess the necessary skills, experience, and professionalism. Projects undergo multi-stage reviews and quality checks before delivery to ensure they meet our high standards and your expectations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can you provide examples of your previous work (portfolio)?
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We have a portfolio of our diverse projects that we can share with you upon request, especially for services like graphic design and translation. Please contact us to discuss your interest, and we'll provide relevant examples of our expertise.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-question">
+                        Do you offer ongoing support or maintenance after a project is completed?
+                        <span class="icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, for many of our services, particularly CRM solutions and customer support, we offer ongoing support and maintenance plans. These can be customized to your needs, ensuring long-term success and peace of mind. Discuss your requirements with our team for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Still have questions?</h2>
+                <p>Don't hesitate to reach out to our team directly.</p>
+                <a href="contact.html" class="btn btn-primary cta-button">Contact Our Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li> </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services/inbound.html">Inbound Support</a></li>
+                        <li><a href="services/chat.html">Live Chat</a></li>
+                        <li><a href="services/ai.html">AI Solutions</a></li>
+                        <li><a href="services/helpdesk.html">Helpdesk</a></li>
+                        <li><a href="services/multilingual.html">Multilingual Support</a></li>
+                        <li><a href="services/crm.html">CRM Setup</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+201002921824">+201002921824</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // FAQ Accordion JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.icon');
+
+                    // Close all other open answers
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question && otherQuestion.classList.contains('active')) {
+                            otherQuestion.classList.remove('active');
+                            otherQuestion.nextElementSibling.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current answer
+                    question.classList.toggle('active');
+                    answer.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/685c3a08c3136d19181ed59c/1iuk45civ';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    </body>
+</html>
