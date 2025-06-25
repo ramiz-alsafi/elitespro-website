@@ -1,49 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech Setup & Automation | ElitesPro</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Support - ElitesPro</title>
+    <meta name="description" content="ElitesPro offers comprehensive tech support services, including VoIP systems setup, hardware recommendations, and workflow automation for efficient operations." />
+    <meta name="keywords" content="Tech Support, VoIP Systems, Hardware Setup, Workflow Automation, IT Support, CRM Integration, Ticketing Systems, ElitesPro" />
+    <meta name="author" content="ElitesPro" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tech Support - ElitesPro" />
+    <meta property="og:description" content="ElitesPro offers comprehensive tech support services, including VoIP systems setup, hardware recommendations, and workflow automation for efficient operations." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elitespro.online/services/tech.html" />
+    <meta property="og:image" content="../assets/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tech Support - ElitesPro" />
+    <meta name="twitter:description" content="ElitesPro offers comprehensive tech support services, including VoIP systems setup, hardware recommendations, and workflow automation for efficient operations." />
+    <meta name="twitter:image" content="../assets/og-image.jpg" />
+
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+
+    <!-- Google Fonts - Poppins (Consistent with other pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2N5W83LPF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F2N5W83LPF');
+    </script>
 </head>
 <body>
-  <header>
-    <h1><a href="../index.html">ElitesPro</a></h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="inbound.html">Inbound Support</a></li>
-        <li><a href="chat.html">Live Chat Support</a></li>
-        <li><a href="crm.html">CRM Integration</a></li>
-        <li><a href="tech.html" aria-current="page">Tech Setup</a></li>
-        <li><a href="multilingual.html">Multilingual Support</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="service-detail">
-      <h2>Tech Setup & Automation</h2>
-      <p>
-        From VoIP systems and hardware to workflow automation and integrations, we set up everything you need to run a high-efficiency call center.
-      </p>
-      <ul>
-        <li>VoIP and telephony system configuration</li>
-        <li>Hardware recommendations and setup guidance</li>
-        <li>Integration with CRMs and ticketing</li>
-        <li>Automation of repetitive tasks to save time</li>
-      </ul>
-      <a href="../index.html" class="btn-primary">Back to Home</a>
-    </section>
-  </main>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">ElitesPro</a>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../about.html" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="nav-link dropbtn active">Services <span class="arrow-down">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="inbound.html">Inbound Support</a>
+                            <a href="chat.html">Live Chat</a>
+                            <a href="crm.html">CRM Solutions</a>
+                            <a href="tech.html" class="active">Tech Support</a>
+                            <a href="multilingual.html">Multilingual Support</a>
+                            <a href="ai.html">AI Solutions</a>
+                            <a href="analytics.html">Analytics & Reporting</a>
+                            <a href="back-office-support.html">Back-Office Support</a>
+                            <a href="helpdesk.html">Helpdesk Management</a>
+                            <a href="tools.html">Tools & Integration</a>
+                            <a href="training.html">Training & QA</a>
+                            <hr class="dropdown-divider">
+                            <a href="subpages/email-support.html">Email Support (Sub)</a>
+                            <a href="subpages/live-chat-agents.html">Live Chat Agents (Sub)</a>
+                        </div>
+                    </li>
+                    <li><a href="../careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 ElitesPro. All rights reserved.</p>
-  </footer>
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Comprehensive Tech Support</h1>
+                <p class="tagline">From VoIP systems to workflow automation, we set up everything you need for high-efficiency operations.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="about-flex-container"> <!-- Reusing existing flex pattern -->
+                    <div class="about-text-content">
+                        <h2>Seamless Technology, Enhanced Productivity</h2>
+                        <p>At ElitesPro, we understand that robust technology is the backbone of efficient customer support. We provide end-to-end tech setup and automation services, ensuring your business runs smoothly with minimal interruptions.</p>
+                        <p>Our expertise covers everything from configuring cloud-based VoIP systems and recommending essential hardware to integrating CRMs and ticketing platforms. We also implement workflow automations to streamline repetitive tasks, saving you time and boosting productivity across your entire operation.</p>
+                        <a href="../contact.html" class="btn btn-primary">Request Tech Setup Services</a>
+                    </div>
+                    <div class="about-image-content">
+                        <img src="../assets/tech-setup-hero.jpg" alt="Technical setup with computers and networks" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section light-bg">
+            <div class="container">
+                <h2>Our Tech Support & Automation Services Include:</h2>
+                <div class="service-features-grid">
+                    <div class="feature-item">
+                        <img src="../assets/voip-setup.jpg" alt="VoIP system setup icon" loading="lazy" style="height: 120px; object-fit: contain; margin-bottom: 20px;">
+                        <h3>VoIP & Telephony System Setup</h3>
+                        <p>Configuration of cloud phone systems and communication platforms for reliable voice support.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../assets/hardware-recommendations.jpg" alt="Hardware recommendations icon" loading="lazy" style="height: 120px; object-fit: contain; margin-bottom: 20px;">
+                        <h3>Hardware Recommendations & Setup</h3>
+                        <p>Guidance on selecting and setting up essential hardware for your support operations, ensuring optimal performance.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../assets/integration-tools.jpg" alt="Integration with CRMs icon" loading="lazy" style="height: 120px; object-fit: contain; margin-bottom: 20px;">
+                        <h3>CRM & Ticketing Integration</h3>
+                        <p>Seamlessly connect your communication systems with CRMs and helpdesk ticketing platforms for unified data.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../assets/automation-tasks.jpg" alt="Automation tasks icon" loading="lazy" style="height: 120px; object-fit: contain; margin-bottom: 20px;">
+                        <h3>Workflow Automation</h3>
+                        <p>Automate repetitive tasks and processes within your support workflows to increase efficiency and accuracy.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="../assets/security-compliance.jpg" alt="Security and compliance icon" loading="lazy" style="height: 120px; object-fit: contain; margin-bottom: 20px;">
+                        <h3>Security & Compliance</h3>
+                        <p>Ensuring your tech setup adheres to best practices for data security and industry compliance standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready for a Robust Tech Infrastructure?</h2>
+                <p>Let ElitesPro build and optimize the technology backbone for your customer support excellence.</p>
+                <a href="../contact.html" class="btn btn-primary cta-button">Get a Free Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>ElitesPro</h3>
+                    <p>Dedicated to providing innovative and efficient freelance and customer support solutions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="../assets/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="../assets/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="../assets/linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-col nav-links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services-links-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="inbound.html">Inbound Support</a></li>
+                        <li><a href="chat.html">Live Chat</a></li>
+                        <li><a href="ai.html">AI Solutions</a></li>
+                        <li><a href="helpdesk.html">Helpdesk</a></li>
+                        <li><a href="multilingual.html">Multilingual Support</a></li>
+                        <li><a href="crm.html">CRM Setup</a></li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li><a href="translation.html">Translation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:ramizalsafi@www.elitespro.online">ramizalsafi@www.elitespro.online</a></p>
+                    <p>Phone: <a href="tel:+201002921824">+201002921824</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> ElitesPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript for navigation and animations -->
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
