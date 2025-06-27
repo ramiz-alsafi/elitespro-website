@@ -62,8 +62,7 @@ To view this website locally, simply open any of the HTML files (e.g., index.htm
 No special server setup is required for basic viewing.
 
 📊 Google Analytics
-This website is integrated with Google Analytics for tracking. The Measurement ID used across all pages is:
-G-F2N5W83LPF
+This website is integrated with Google Analytics for tracking. The Measurement ID used across all pages is
 
 ✉️ Contact Information
 For general inquiries or support, you can reach ElitesPro via:
