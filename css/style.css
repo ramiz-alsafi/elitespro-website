@@ -859,7 +859,7 @@ section {
 .career-image-content img {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    max-width: 100%;
+    max-width: 120%;
     height: 350px;
     object-fit: cover;
 }
