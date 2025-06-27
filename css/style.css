@@ -850,18 +850,21 @@ section {
 }
 
 .career-image-content {
-    flex: 1;
+    flex: 1; /* This remains to allow it to take available space in the flex container */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ensure it takes full width of its flex allocation */
 }
 
 .career-image-content img {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    max-width: 120%;
-    height: 350px;
-    object-fit: cover;
+    width: 100%; /* Makes the image fill 100% of its parent div's width */
+    height: auto; /* Changed to auto to maintain aspect ratio and scale responsively */
+    /* If you still want a fixed height and cropping, you can uncomment/add these: */
+    /* height: 350px; */
+    /* object-fit: cover; */
 }
 
 .open-positions-section {
