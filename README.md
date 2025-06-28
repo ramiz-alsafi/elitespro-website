@@ -25,6 +25,7 @@ ElitesPro is designed to provide clear information about our services, company, 
     * Translation & Transcription
     * Data Entry & Microsoft Office
     * Email Marketing & Cold Calling
+
 * **About Us Section:** Learn more about ElitesPro's mission, values, and vision.
 * **Careers Page:** Explore open positions and opportunities to join our team.
 * **Contact Form:** Easily get in touch with us for inquiries.
