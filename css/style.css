@@ -12,7 +12,6 @@
     --border-radius-small: 5px; /* Added for dropdown */
     --transition-speed: 0.3s ease;
     --shadow-small: 0 8px 16px 0 rgba(0,0,0,0.1); /* Added for dropdown */
-    /* Assuming --nav-link-padding is defined or will be */
     --nav-link-padding: 8px 0; /* Define if not already in your specific nav-link styles */
 }
 
@@ -545,9 +544,6 @@ section {
         transform: translateY(10px);
     }
     .dropdown:hover .dropdown-content {
-        /* These rules are handled by the main .dropdown:hover .dropdown-content block above */
-        /* You can remove this media query block if the main hover rule is robust enough. */
-        /* Keeping it here for clarity if you prefer explicit desktop behavior */
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
@@ -555,11 +551,43 @@ section {
 }
 
 
-/* Mobile navigation */
+/* Mobile navigation and other mobile-specific styles for screens 767px and narrower */
 @media (max-width: 767px) {
-    .main-header {
-        padding: 10px 0;
+    /* Card Layout Fix */
+    .service-cards,
+    .job-listing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
+
+    /* General Mobile Adjustments */
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem; /* Using the larger mobile font size from your original file */
+        margin-bottom: 15px;
+    }
+    .hero-content .tagline {
+        font-size: 1.1rem; /* Using the larger mobile font size from your original file */
+        margin-bottom: 25px;
+    }
+    .intro-section h2,
+    .featured-services h2,
+    .open-positions-section h2 {
+        font-size: 2rem;
+    }
+    .cta-section h2 {
+        font-size: 2.2rem; /* Using the larger mobile font size from your original file */
+    }
+    .card {
+        padding: 25px;
+    }
+    .card img {
+        height: 180px;
+    }
+
+    /* Mobile navigation */
     .logo {
         font-size: 1.5rem;
     }
@@ -626,7 +654,6 @@ section {
     }
 
     /* Hide dropdown on mobile by default, show when parent li has 'active' */
-    /* This rule will be overridden if the JS actively sets display: block; on .dropdown-content */
     .dropdown:not(.active) .dropdown-content {
         display: none;
         visibility: hidden;
@@ -636,23 +663,10 @@ section {
         visibility: visible;
     }
 
-
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-
-    .hero-content .tagline {
-        font-size: 1.1rem;
-    }
-
     .hero-content .btn {
         display: block;
         margin: 15px auto;
         width: 90%;
-    }
-
-    .cta-section h2 {
-        font-size: 2.2rem;
     }
 
     .footer-grid {
