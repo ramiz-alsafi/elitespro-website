@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if click is outside any dropdown (if dropdowns are separate from main nav close)
             document.querySelectorAll('.dropdown').forEach(dropdown => {
                 if (dropdown.classList.contains('active') && !dropdown.contains(e.target) && e.target !== dropdownBtn) {
-                     dropdown.classList.remove('active');
+                    dropdown.classList.remove('active');
                 }
             });
         }
     });
 
-
+    /*
     // Scroll-based animation for sections
     const sections = document.querySelectorAll('section');
     const observerOptions = {
@@ -106,5 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.transform = 'translateY(0)';
         }
     });
+    */
 
 });
