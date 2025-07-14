@@ -47,7 +47,7 @@ This project is open source and available under the MIT License.
 📞 Contact
 For inquiries, collaborations, or freelance work, feel free to reach out:
 
-📧 Email: ramizalsafi@www.elitespro.online
+📧 Email: ramizalsafi@elitespro.online
 
 📞 Phone: +20 100 292 1824
 
