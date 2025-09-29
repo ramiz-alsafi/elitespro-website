@@ -37,6 +37,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3542155706875142"
      crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="6Qrb8fQMtnHqhqUy169zEoqaqXfyhy5iOKye_GkOq84" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -142,6 +143,30 @@
                 <a href="contact.html" class="btn btn-primary cta-button">Get in Touch Today</a>
             </div>
         </section>
+        <section class="contact-form">
+  <div class="container">
+    <h2>Quick Contact</h2>
+    <form method="POST" action="https://elitespro.online/api/submit">
+      <label>Name<br>
+        <input type="text" name="name" required>
+      </label><br><br>
+
+      <label>Email<br>
+        <input type="email" name="email" required>
+      </label><br><br>
+
+      <label>Message<br>
+        <textarea name="message" required></textarea>
+      </label><br><br>
+
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey="6Lf79NgrAAAAANzLB0VnQQ-ZJFQ9gsJ6Hp3kUXjW"></div>
+      <br>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
     </main>
 
     <footer class="main-footer">
